@@ -1,0 +1,142 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{url}
+\usepackage{parskip}
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+\usepackage{tabularx}
+
+\usepackage{enumitem}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\setlength\bibitemsep{1em}
+
+\usepackage{fontawesome5}
+
+\newenvironment{jobshort}[2]
+{
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+        \textbf{#1} & \hfill & #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+}
+
+\newenvironment{joblong}[2]
+{
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+        \textbf{#1} & \hfill & #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=\textbullet]
+        }
+        {
+        \end{itemize}
+    \end{minipage}
+}
+
+\begin{document}
+
+    \pagestyle{empty}
+
+    \begin{tabularx}{\linewidth}{@{} C @{}}
+        \Huge{Md. Mosfikur Rahman} \\[7.5pt]
+        \href{https://github.com/mdmosfikurrahman}{\raisebox{-0.05\height}\faGithub\ GitHub} \ $|$ \
+        \href{https://linkedin.com/in/mdmosfikurrahman}{\raisebox{-0.05\height}\faLinkedin\ LinkedIn} \ $|$ \
+        \href{https://mdmosfikurrahman.github.io}{\raisebox{-0.05\height}\faGlobe \ Portfolio} \ $|$ \
+        \href{mailto:mdmosfikurrahman.cse@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ mdmosfikurrahman.cse@gmail.com} \ $|$ \
+        \href{tel:+8801332512922}{\raisebox{-0.05\height}\faMobile \ +8801332512922} \\
+    \end{tabularx}
+
+    \section{\textbf{Work Experiences}}
+
+    \begin{joblong}{Software Engineer, REVE Systems Ltd.}{July 2023 - Present}
+        \item Optimize data structures in Oracle DB for efficient storage and retrieval.
+        \item Research and integrate new tools, libraries, APIs, and frameworks for enhanced performance.
+    \end{joblong}
+
+    \begin{joblong}{Software Engineer, BJIT Group}{April 2022 - June 2023}
+        \item Implement JavaEE back-end/API using REST, SOAP, Spring, and microservices.
+        \item Create fundamental design documents, including API specifications and UMLs.
+    \end{joblong}
+
+    \begin{joblong}{Trainee Software Engineer, BJIT Group}{October 2021 - March 2022}
+        \item Assisted in coding, debugging, and testing while learning industry best practices.
+        \item Developed skills in JavaEE, REST, SOAP, Spring, and front-end technologies.
+    \end{joblong}
+
+
+    \section{\textbf{Skills}}
+    \begin{tabularx}{\linewidth}{@{}l X@{}}
+        Programming Languages & \normalsize{Java, JavaScript, Python}                                               \\
+        Frameworks            & \normalsize{Spring Boot, Spring Batch, Bootstrap, Thymeleaf, React JS}              \\
+        Database Expertise    & \normalsize{Oracle, MySQL, MongoDB, Spiral DB}                                      \\
+    \end{tabularx}
+
+    \section{\textbf{Education}}
+    \begin{tabularx}{\linewidth}{@{}l X@{}}
+        2021 & Bachelor of Science (B.Sc.) in Computer Science and Engineering \newline \textbf{Daffodil International University, Bangladesh} \hfill (CGPA: 3.83/4.00) \\
+
+        2021 & Exchange Program in Computer Science and Engineering \newline \textbf{Adam Mickiewicz University, Poland} \hfill (Passed with 80\% Marks)             \\
+    \end{tabularx}
+
+    \section{\textbf{Projects}}
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+        \textbf{Customs Bond Management System, NBR} & \hfill \textit{\href{https://cusbond.gov.bd/}{Link to Demo}} \\[3.75pt]
+        \multicolumn{2}{@{}X@{}}{%
+            Responsibilities:
+            \begin{itemize}[leftmargin=*]
+                \item Acted as the module owner including Legal and Case Information System, Utilization Declaration System.
+                \item Implemented BGMEA and BKMEA Database integration for Utilization Declaration.
+            \end{itemize}
+        } \\
+    \end{tabularx}
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+        \textbf{Rakuten Echiba Backend Development, Rakuten} & \hfill \textit{\href{https://www.rakuten.co.jp/}{Link to Demo}} \\[3.75pt]
+        \multicolumn{2}{@{}X@{}}{%
+            Responsibilities:
+            \begin{itemize}[leftmargin=*]
+                \item Solely focused on backend development for the Rakuten Echiba project utilizing Spring Boot framework.
+                \item Managed Oracle database operations to ensure seamless data handling.
+            \end{itemize}
+        } \\
+    \end{tabularx}
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+        \textbf{Denka Pharmaceuticals Full-stack Development, Denka} & \hfill \textit{\href{https://www.denka.co.jp/eng/}{Link to Demo}} \\[3.75pt]
+        \multicolumn{2}{@{}X@{}}{%
+            Responsibilities:
+            \begin{itemize}[leftmargin=*]
+                \item Engaged in both backend and frontend development for Denka Pharmaceuticals.
+                \item Utilized Spring Boot and Thymeleaf for backend and frontend development, respectively.
+            \end{itemize}
+        } \\
+    \end{tabularx}
+
+    \vfill
+    \center{\footnotesize Updated On: \today}
+
+\end{document}
