@@ -35,15 +35,6 @@
 
 \usepackage{fontawesome5}
 
-\newenvironment{jobshort}[2]
-{
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-        \textbf{#1} & \hfill & #2 \\[3.75pt]
-    \end{tabularx}
-    }
-    {
-}
-
 \newenvironment{joblong}[2]
 {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
@@ -88,20 +79,6 @@
     \end{joblong}
 
 
-    \section{\textbf{Skills}}
-    \begin{tabularx}{\linewidth}{@{}l X@{}}
-        Programming Languages & \normalsize{Java, JavaScript, Python}                                               \\
-        Frameworks            & \normalsize{Spring Boot, Spring Batch, Bootstrap, Thymeleaf, React JS}              \\
-        Database Expertise    & \normalsize{Oracle, MySQL, MongoDB, Spiral DB}                                      \\
-    \end{tabularx}
-
-    \section{\textbf{Education}}
-    \begin{tabularx}{\linewidth}{@{}l X@{}}
-        2021 & Bachelor of Science (B.Sc.) in Computer Science and Engineering \newline \textbf{Daffodil International University, Bangladesh} \hfill (CGPA: 3.83/4.00) \\
-
-        2021 & Exchange Program in Computer Science and Engineering \newline \textbf{Adam Mickiewicz University, Poland} \hfill (Passed with 80\% Marks)             \\
-    \end{tabularx}
-
     \section{\textbf{Projects}}
     \begin{tabularx}{\linewidth}{ @{}l r@{} }
         \textbf{Customs Bond Management System, NBR} & \hfill \textit{\href{https://cusbond.gov.bd/}{Link to Demo}} \\[3.75pt]
@@ -135,6 +112,23 @@
             \end{itemize}
         } \\
     \end{tabularx}
+
+
+    \section{\textbf{Skills}}
+    \begin{tabularx}{\linewidth}{@{}l X@{}}
+        Programming Languages & \normalsize{Java, JavaScript, Python}                                               \\
+        Frameworks            & \normalsize{Spring Boot, Spring Batch, Bootstrap, Thymeleaf, React JS}              \\
+        Database Expertise    & \normalsize{Oracle, MySQL, MongoDB, Spiral DB}                                      \\
+    \end{tabularx}
+
+
+    \section{\textbf{Education}}
+    \begin{tabularx}{\linewidth}{@{}l X@{}}
+        2021 & Bachelor of Science (B.Sc.) in Computer Science and Engineering \newline \textbf{Daffodil International University, Bangladesh} \hfill (CGPA: 3.83/4.00) \\
+
+        2021 & Exchange Program in Computer Science and Engineering \newline \textbf{Adam Mickiewicz University, Poland} \hfill (Passed with 80\% Marks)             \\
+    \end{tabularx}
+
 
     \vfill
     \center{\footnotesize Updated On: \today}
