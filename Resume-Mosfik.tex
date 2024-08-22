@@ -1,191 +1,159 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 
-\usepackage{url}
-\usepackage{parskip}
-
-\RequirePackage{color}
-\RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
-
-\usepackage{tabularx}
-
-\usepackage{enumitem}
-
-\newcolumntype{C}{>{\centering\arraybackslash}X}
-
-\usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
-
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{multicol}
-\usepackage{multirow}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\usepackage[unicode, colorlinks, linkcolor=RoyalBlue, urlcolor=RoyalBlue, citecolor=RoyalBlue]{hyperref}
+\definecolor{RoyalBlue}{rgb}{0.25,0.41,0.88}
 
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
-
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=10]{biblatex}
-
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\setlength\bibitemsep{1em}
-
-\usepackage{fontawesome5}
-
-\newenvironment{jobshort}[2]
-{
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-        \textbf{#1} & \hfill & #2 \\[3.75pt]
-    \end{tabularx}
-    }
-    {
+\geometry{
+    left=1.27cm,
+    right=1.27cm,
+    top=1.27cm,
+    bottom=1.27cm,
 }
 
-\newenvironment{joblong}[2]
-{
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-        \textbf{#1} & \hfill & #2 \\[3.75pt]
-    \end{tabularx}
-    \begin{minipage}[t]{\linewidth}
-        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=\textbullet]
-        }
-        {
-        \end{itemize}
-    \end{minipage}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\footnotesize Updated On: \today}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\footskip}{15pt} % Add this line to set a suitable value for \footskip
+
+\urlstyle{same}
+
+\RaggedRight{}
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{\item[$\bullet$] \small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubheading}[5]{
+    \vspace{-1pt}\item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\href{#4}{#1}} & #2 \\
+    \textit{\small#3} & \textit{\small #5} \\
+    \end{tabular*}\vspace{-5pt}
 }
+
+% CV Start
 
 \begin{document}
 
-    \pagestyle{plain}
+    % Title
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+        \textsc{{\LARGE Md. Mosfikur Rahman}} &                                                                                     \\
+        Road-20, Sector-13                    & Mobile: +880 1332-512922                                                            \\
+        Uttara, Dhaka                         & Portfolio: \href{https://mdmosfikurrahman.github.io/}{mdmosfikurrahman.github.io}   \\
+        Bangladesh                            & Email: \href{mailto:mdmosfikurrahman.cse@gmail.com}{mdmosfikurrahman.cse@gmail.com} \\
+    \end{tabular*}
 
-    \begin{tabularx}{\linewidth}{@{} C @{}}
-        \Huge{Md. Mosfikur Rahman} \\[7.5pt]
-        \href{https://github.com/mdmosfikurrahman}{\raisebox{-0.05\height}\faGithub\ GitHub} \ $|$ \
-        \href{https://linkedin.com/in/mdmosfikurrahman}{\raisebox{-0.05\height}\faLinkedin\ LinkedIn} \ $|$ \
-        \href{https://mdmosfikurrahman.github.io}{\raisebox{-0.05\height}\faGlobe \ Portfolio} \ $|$ \
-        \href{mailto:mdmosfikurrahman.cse@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ mdmosfikurrahman.cse@gmail.com} \ $|$ \
-        \href{tel:+8801332512922}{\raisebox{-0.05\height}\faMobile \ +8801332512922} \\
-    \end{tabularx}
-
-
-    \section{\textbf{Career Objective}}
-    Proactive software engineer with a strong Java background, specializing in scalable application development within
-    cross-functional teams. Experienced in Spring Boot, Thymeleaf, and proficient in Python, HTML, CSS, and JavaScript, I am
-    eager to leverage my analytical skills in algorithm design and REST API integration to drive innovation and growth in a
-    forward-looking organization.
+    % Education
 
 
-    \section{\textbf{Work Experiences}}
+    \section{Education}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+    {Daffodil International University}{Dhaka, Bangladesh}
+    {Bachelor of Science in Computer Science and Engineering; CGPA: 3.83}{https://daffodilvarsity.edu.bd/}{Jan. 2018 -- Dec. 2021}
+    \resumeSubheading
+    {Adam Mickiewicz University}{Poznan, Poland}
+    {Exchange Program from Erusmus Mundus Scholarship}{https://amu.edu.pl/en}{Mar. 2021 -- Aug. 2021}
+    \resumeSubHeadingListEnd
 
-    \begin{joblong}{Software Engineer, REVE Systems Ltd.}{July 2023 - Present}
-        \item Develop and implement scalable Java applications using advanced design patterns.
-        \item Optimize data structures in Oracle DB for efficient storage and retrieval.
-        \item Research and integrate new tools, libraries, APIs, and frameworks for enhanced performance.
-    \end{joblong}
-
-    \begin{joblong}{Software Engineer, BJIT Group}{April 2022 - June 2023}
-        \item Implement JavaEE back-end/API using REST, SOAP, Spring, and microservices.
-        \item Build enterprise apps using modern Java web frameworks and Thymeleaf.
-        \item Create fundamental design documents, including API specifications and UMLs.
-    \end{joblong}
-
-    \begin{joblong}{Trainee Software Engineer, BJIT Group}{October 2021 - March 2022}
-        \item Acquired foundational knowledge in software engineering through structured training.
-        \item Assisted in coding, debugging, and testing while learning industry best practices.
-        \item Developed skills in JavaEE, REST, SOAP, Spring, and front-end technologies.
-    \end{joblong}
+    % Experience
 
 
-    \section{\textbf{Skills}}
-    \begin{tabularx}{\linewidth}{@{}l X@{}}
-        Core Skills           & \normalsize{OOP, REST API, SOAP, Micro-services, Data Structures, UML, Code Review} \\
-        Programming Languages & \normalsize{Java, JavaScript, Python}                                               \\
-        Frameworks            & \normalsize{Spring Boot, Spring Batch, Bootstrap, Thymeleaf, React JS}              \\
-        Technical Tools       & \normalsize{Git, Postman, IntelliJ IDEA, DataGrip}                                  \\
-        Database Expertise    & \normalsize{Oracle, MySQL, MongoDB, Spiral DB}                                      \\
-    \end{tabularx}
+    \section{Experience}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+    {REVE Systems Ltd.}{Dhaka, Bangladesh}
+    {Software Engineer}{https://www.revesoft.com/}{Jul. 2023 - Present}
+    \resumeItemListStart
+    \resumeItem{Develop and implement scalable Java applications using advanced design patterns.}
+    \resumeItem{Optimize data structures in Oracle DB for efficient storage and retrieval.}
+    \resumeItem{Research and integrate new tools, libraries, APIs, and frameworks for enhanced performance.}
+    \resumeItemListEnd
+    \resumeSubheading
+    {BJIT Group}{Dhaka, Bangladesh}
+    {Software Engineer}{https://bjitgroup.com/}{Apr. 2022 - Jun. 2023}
+    \resumeItemListStart
+    \resumeItem{Implement JavaEE back-end/API using REST, SOAP, Spring, and microservices.}
+    \resumeItem{Build enterprise apps using modern Java web frameworks and Thymeleaf.}
+    \resumeItem{Create fundamental design documents, including API specifications and UMLs.}
+    \resumeItemListEnd
+    \resumeSubheading
+    {BJIT Group}{Dhaka, Bangladesh}
+    {Software Engineer}{https://bjitgroup.com/}{Oct. 2021 - May. 2022}
+    \resumeItemListStart
+    \resumeItem{Acquired foundational knowledge in software engineering through structured training.}
+    \resumeItem{Assisted in coding, debugging, and testing while learning industry best practices.}
+    \resumeItem{Developed skills in JavaEE, REST, SOAP, Spring, and front-end technologies.}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+    % Projects
 
 
-    \section{\textbf{Education}}
-    \begin{tabularx}{\linewidth}{@{}l X@{}}
-        2021 & Bachelor of Science (B.Sc.) in Computer Science and Engineering \newline \textbf{Daffodil International University, Bangladesh} \hfill (CGPA: 3.83/4.00) \\
+    \section{Projects}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+    {Customs Bond Management System, NBR}{}
+    {REVE Systems Ltd.}{https://cusbond.gov.bd/}{}
+    \resumeItemListStart
+    \resumeItem{Acted as the module owner including Legal and Case Information System, Utilization Declaration System.}
+    \resumeItem{Implemented BGMEA and BKMEA Database integration for Utilization Declaration.}
+    \resumeItem{Employed a diverse tech stack comprising Spring Boot, Thymeleaf, and Oracle DB for project execution.}
+    \resumeItemListEnd
+    \resumeSubheading
+    {Rakuten Echiba Backend Development, Rakuten}{}
+    {BJIT Group}{https://www.rakuten.co.jp/}{}
+    \resumeItemListStart
+    \resumeItem{Solely focused on backend development for the Rakuten Echiba project utilizing Spring Boot framework.}
+    \resumeItem{Managed Oracle database operations to ensure seamless data handling.}
+    \resumeItem{Led the implementation of a custom framework tailored to meet project-specific requirements.}
+    \resumeItemListEnd
+    \resumeSubheading
+    {Denka Pharmaceuticals Full-stack Development, Denka}{}
+    {BJIT Group}{https://www.denka.co.jp/eng/}{}
+    \resumeItemListStart
+    \resumeItem{Engaged in both backend and frontend development for Denka Pharmaceuticals.}
+    \resumeItem{Utilized Spring Boot and Thymeleaf for backend and frontend development, respectively.}
+    \resumeItemListEnd
+    \resumeSubheading
+    {Mochida Pharmaceuticals Backend Development, Mochida}{}
+    {BJIT Group}{https://www.mochida.co.jp/english/}{}
+    \resumeItemListStart
+    \resumeItem{Developed backend functionalities for Mochida Pharmaceuticals using Spring Boot and Spring Batch.}
+    \resumeItem{Implemented a unique database solution named Spiral DB to optimize data management processes.}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-        2021 & Exchange Program in Computer Science and Engineering \newline \textbf{Adam Mickiewicz University, Poland} \hfill (Passed with 80\% Marks)                \\
-
-        2016 & Higher Secondary School Certificate \newline \textbf{Major General Mahmudul Hasan Adarsha College, Tangail} \hfill (GPA: 4.67/5.00)                      \\
-
-        2014 & Secondary School Certificate \newline \textbf{Police Lines Adarsha High School, Tangail} \hfill (GPA: 5.00/5.00)                                         \\
-    \end{tabularx}
-
-
-    \section{\textbf{Projects}}
-    \begin{tabularx}{\linewidth}{ @{}l r@{} }
-        \textbf{Customs Bond Management System, NBR} & \hfill \textit{\href{https://cusbond.gov.bd/}{Link to Demo}} \\[3.75pt]
-        \multicolumn{2}{@{}X@{}}{%
-            Responsibilities:
-            \begin{itemize}[leftmargin=*]
-                \item Held key roles across various modules of the CBMS project for the National Board of Revenue (NBR).
-                \item Acted as the module owner including Legal and Case Information System, Utilization Declaration System.
-                \item Implemented BGMEA and BKMEA Database integration for Utilization Declaration.
-                \item Employed a diverse tech stack comprising Spring Boot, Thymeleaf, and Oracle DB for project execution.
-            \end{itemize}
-        } \\
-    \end{tabularx}
-
-    \begin{tabularx}{\linewidth}{ @{}l r@{} }
-        \textbf{Rakuten Echiba Backend Development, Rakuten} & \hfill \textit{\href{https://www.rakuten.co.jp/}{Link to Demo}} \\[3.75pt]
-        \multicolumn{2}{@{}X@{}}{%
-            Responsibilities:
-            \begin{itemize}[leftmargin=*]
-                \item Solely focused on backend development for the Rakuten Echiba project utilizing Spring Boot framework.
-                \item Managed Oracle database operations to ensure seamless data handling.
-                \item Led the implementation of a custom framework tailored to meet project-specific requirements.
-            \end{itemize}
-        } \\
-    \end{tabularx}
-
-    \begin{tabularx}{\linewidth}{ @{}l r@{} }
-        \textbf{Denka Pharmaceuticals Full-stack Development, Denka} & \hfill \textit{\href{https://www.denka.co.jp/eng/}{Link to Demo}} \\[3.75pt]
-        \multicolumn{2}{@{}X@{}}{%
-            Responsibilities:
-            \begin{itemize}[leftmargin=*]
-                \item Engaged in both backend and frontend development for Denka Pharmaceuticals.
-                \item Utilized Spring Boot and Thymeleaf for backend and frontend development, respectively.
-                \item Contributed to frontend enhancements using React JS.
-                \item Managed data storage and retrieval using MySQL database.
-            \end{itemize}
-        } \\
-    \end{tabularx}
-
-    \begin{tabularx}{\linewidth}{ @{}l r@{} }
-        \textbf{Mochida Pharmaceuticals Backend Development, Mochida} & \hfill \textit{\href{https://www.mochida.co.jp/english/}{Link to Demo}} \\[3.75pt]
-        \multicolumn{2}{@{}X@{}}{%
-            Responsibilities:
-            \begin{itemize}[leftmargin=*]
-                \item Developed backend functionalities for Mochida Pharmaceuticals using Spring Boot and Spring Batch.
-                \item Implemented a unique database solution named Spiral DB to optimize data management processes.
-            \end{itemize}
-        } \\
-    \end{tabularx}
+    % Programing Skills
 
 
-    \section{\textbf{References}}
-    \begin{tabularx}{\linewidth}{@{}l X@{}}
-
-        \textbf{Anisuzzaman Rubel}   & Consultant \textendash Enterprise Integrator, Aspire to Innovate (a2i), \newline ICT Division, Dhaka, Bangladesh \\
-        & Contact: +880 1906-994487                                                                                        \\
-        & Email: \href{mailto:anis.zaman@a2i.gov.bd}{anis.zaman@a2i.gov.bd} \\[3.75pt]
-
-        \textbf{Md. Minhajur Rahman} & Senior General Manager, ENT\textendash4, Engineering Division, \newline BJIT Group, Dhaka, Bangladesh            \\
-        & Contact: +880 1816-292692                                                                                        \\
-        & Email: \href{mailto:minhajur.rahman@bjitgroup.com}{minhajur.rahman@bjitgroup.com} \\[3.75pt]
-    \end{tabularx}
-
-
-    \vfill
-    \center{\footnotesize Updated On: \today}
+    \section{Programming Skills}
+    \resumeSubHeadingListStart
+    \item{
+        \textbf{Languages:} Java, JavaScript, Python, SQL
+    }
+    \item{
+        \textbf{Technologies:} SpringBoot, Spring Batch, Oracle, ReactJS
+    }
+    \resumeSubHeadingListEnd
 
 \end{document}
