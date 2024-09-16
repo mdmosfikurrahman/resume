@@ -30,13 +30,16 @@
 
 \urlstyle{same}
 
+% Text alignment
 \RaggedRight{}
 \setlength{\tabcolsep}{0in}
 
+% Section title formatting
 \titleformat{\section}{
     \vspace{-4pt}\scshape\raggedright\Large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
+% Custom commands
 \newcommand{\resumeItem}[1]{\item[$\bullet$] \small{#1 \vspace{-2pt}}}
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
@@ -51,95 +54,85 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+% CV Start
 \begin{document}
 
+    % Title
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-        \textsc{\LARGE Md. Mosfikur Rahman} &                                                                                     \\
-        Road-20, Sector-13                  & Mobile: +880 1332-512922                                                            \\
-        Uttara, Dhaka                       & Portfolio: \href{https://mdmosfikurrahman.github.io/}{mdmosfikurrahman.github.io}   \\
-        Bangladesh                          & Email: \href{mailto:mdmosfikurrahman.cse@gmail.com}{mdmosfikurrahman.cse@gmail.com} \\
+        \textsc{\LARGE Md. Mosfikur Rahman} & \\
+        Road-20, Sector-13 & Mobile: +880 1332-512922 \\
+        Uttara, Dhaka & Portfolio: \href{https://mdmosfikurrahman.github.io/}{mdmosfikurrahman.github.io} \\
+        Bangladesh & Email: \href{mailto:mdmosfikurrahman.cse@gmail.com}{mdmosfikurrahman.cse@gmail.com} \\
     \end{tabular*}
 
-
-
+    % Education
     \section{Education}
     \resumeSubHeadingListStart
     \resumeSubheading
-    {Daffodil International University}{Dhaka, Bangladesh}
-    {Bachelor of Science in Computer Science and Engineering; CGPA: 3.83}{https://daffodilvarsity.edu.bd/}{Jan. 2018 -- Dec. 2021}
+        {Daffodil International University}{Dhaka, Bangladesh}
+        {Bachelor of Science in Computer Science and Engineering; CGPA: \textbf{3.83}}{https://daffodilvarsity.edu.bd/}{Jan. 2018 -- Dec. 2021}
     \resumeSubheading
-    {Adam Mickiewicz University}{Poznan, Poland}
-    {Exchange Program from Erusmus Mundus Scholarship}{https://amu.edu.pl/en}{Mar. 2021 -- Aug. 2021}
+        {Adam Mickiewicz University}{Poznan, Poland}
+        {Exchange Program from Erusmus Mundus Scholarship}{https://amu.edu.pl/en}{Mar. 2021 -- Aug. 2021}
     \resumeSubHeadingListEnd
 
-
-
+    % Experience
     \section{Experience}
     \resumeSubHeadingListStart
     \resumeSubheading
-    {REVE Systems Ltd.}{Dhaka, Bangladesh}
-    {Software Engineer}{https://www.revesoft.com/}{Jul. 2023 - Present}
+        {REVE Systems Ltd.}{Dhaka, Bangladesh}
+        {Software Engineer}{https://www.revesoft.com/}{Jul. 2023 - Present}
     \resumeItemListStart
-    \resumeItem{Develop and implement scalable Java applications using advanced design patterns.}
-    \resumeItem{Optimize data structures in Oracle DB for efficient storage and retrieval.}
-    \resumeItem{Research and integrate new tools, libraries, APIs, and frameworks for enhanced performance.}
+        \resumeItem{Develop and implement scalable Java applications using advanced design patterns.}
+        \resumeItem{Optimize data structures in Oracle DB for efficient storage and retrieval.}
+        \resumeItem{Research and integrate new tools, libraries, APIs, and frameworks for enhanced performance.}
     \resumeItemListEnd
     \resumeSubheading
-    {BJIT Group}{Dhaka, Bangladesh}
-    {Software Engineer}{https://bjitgroup.com/}{Apr. 2022 - Jun. 2023}
+        {BJIT Group}{Dhaka, Bangladesh}
+        {Software Engineer}{https://bjitgroup.com/}{Apr. 2022 - Jun. 2023}
     \resumeItemListStart
-    \resumeItem{Implement JavaEE back-end/API using REST, SOAP, Spring, and microservices.}
-    \resumeItem{Build enterprise apps using modern Java web frameworks and Thymeleaf.}
-    \resumeItem{Create fundamental design documents, including API specifications and UMLs.}
-    \resumeItemListEnd
-    \resumeSubheading
-    {BJIT Group}{Dhaka, Bangladesh}
-    {Software Engineer}{https://bjitgroup.com/}{Oct. 2021 - May. 2022}
-    \resumeItemListStart
-    \resumeItem{Acquired foundational knowledge in software engineering through structured training.}
-    \resumeItem{Assisted in coding, debugging, and testing while learning industry best practices.}
-    \resumeItem{Developed skills in JavaEE, REST, SOAP, Spring, and front-end technologies.}
+        \resumeItem{Implement JavaEE back-end/API using REST, SOAP, Spring, and microservices.}
+        \resumeItem{Build enterprise apps using modern Java web frameworks and Thymeleaf.}
+        \resumeItem{Create fundamental design documents, including API specifications and UMLs.}
     \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-
-
+    % Projects
     \section{Projects}
     \resumeSubHeadingListStart
     \resumeSubheading
-    {Customs Bond Management System, NBR}{}
-    {REVE Systems Ltd.}{https://cusbond.gov.bd/}{}
+        {Customs Bond Management System, NBR}{}
+        {REVE Systems Ltd.}{https://cusbond.gov.bd/}{}
     \resumeItemListStart
-    \resumeItem{Acted as the module owner including Legal and Case Information System, Utilization Declaration System.}
-    \resumeItem{Implemented BGMEA and BKMEA Database integration for Utilization Declaration.}
-    \resumeItem{Employed a diverse tech stack comprising Spring Boot, Thymeleaf, and Oracle DB for project execution.}
+        \resumeItem{Acted as the module owner including Legal and Case Information System, Utilization Declaration System.}
+        \resumeItem{Implemented BGMEA and BKMEA Database integration for Utilization Declaration.}
+        \resumeItem{Employed a diverse tech stack comprising Spring Boot, Thymeleaf, and Oracle DB for project execution.}
     \resumeItemListEnd
     \resumeSubheading
-    {Rakuten Echiba Backend Development, Rakuten}{}
-    {BJIT Group}{https://www.rakuten.co.jp/}{}
+        {Rakuten Echiba Backend Development, Rakuten}{}
+        {BJIT Group}{https://www.rakuten.co.jp/}{}
     \resumeItemListStart
-    \resumeItem{Solely focused on backend development for the Rakuten Echiba project utilizing Spring Boot framework.}
-    \resumeItem{Managed Oracle database operations to ensure seamless data handling.}
-    \resumeItem{Led the implementation of a custom framework tailored to meet project-specific requirements.}
+        \resumeItem{Solely focused on backend development for the Rakuten Echiba project utilizing Spring Boot framework.}
+        \resumeItem{Managed Oracle database operations to ensure seamless data handling.}
+        \resumeItem{Led the implementation of a custom framework tailored to meet project-specific requirements.}
     \resumeItemListEnd
     \resumeSubheading
-    {Denka Pharmaceuticals Full-stack Development, Denka}{}
-    {BJIT Group}{https://www.denka.co.jp/eng/}{}
+        {Denka Pharmaceuticals Full-stack Development, Denka}{}
+        {BJIT Group}{https://www.denka.co.jp/eng/}{}
     \resumeItemListStart
-    \resumeItem{Engaged in both backend and frontend development for Denka Pharmaceuticals.}
-    \resumeItem{Utilized Spring Boot and Thymeleaf for backend and frontend development, respectively.}
+        \resumeItem{Engaged in both backend and frontend development for Denka Pharmaceuticals.}
+        \resumeItem{Utilized Spring Boot and Thymeleaf for backend and frontend development, respectively.}
     \resumeItemListEnd
     \resumeSubheading
-    {Mochida Pharmaceuticals Backend Development, Mochida}{}
-    {BJIT Group}{https://www.mochida.co.jp/english/}{}
+        {Mochida Pharmaceuticals Backend Development, Mochida}{}
+        {BJIT Group}{https://www.mochida.co.jp/english/}{}
     \resumeItemListStart
-    \resumeItem{Developed backend functionalities for Mochida Pharmaceuticals using Spring Boot and Spring Batch.}
-    \resumeItem{Implemented a unique database solution named Spiral DB to optimize data management processes.}
+        \resumeItem{Developed backend functionalities for Mochida Pharmaceuticals using Spring Boot and Spring Batch.}
+        \resumeItem{Implemented a unique database solution named Spiral DB to optimize data management processes.}
     \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-
-
+    % Programming Skills
     \section{Programming Skills}
     \resumeSubHeadingListStart
     \item{
