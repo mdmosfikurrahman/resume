@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DIR: .
-      FILE: Resume-Md-Mosfikur-Rahman
+      FILE: Resume-Mosfik
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
-      - name: Resume-Md-Mosfikur-Rahman
+      - name: Resume-Mosfik
         uses: dante-ev/latex-action@latest
         with:
           root_file: ${{ env.FILE }}
