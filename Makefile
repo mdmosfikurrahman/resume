@@ -1,4 +1,4 @@
-NAME = Resume-Mosfik
+NAME = Resume_Md-Mosfikur-Rahman
 
 all:
 	latexmk -pdf ${NAME}.tex

@@ -5,7 +5,7 @@ This repository contains the LaTeX source files for my resume, along with a GitH
 ## Files
 
 - **index.html**: Redirects to the latest PDF version of the resume.
-- **Resume-Mosfik.tex**: The LaTeX source file for the resume.
+- **Resume_Md-Mosfikur-Rahman.tex**: The LaTeX source file for the resume.
 - **Makefile**: Automates the process of compiling the LaTeX file to PDF.
 - **.github/workflows/build.yml**: GitHub Actions workflow for building and deploying the PDF.
 
@@ -19,7 +19,7 @@ To build the resume PDF locally, you'll need to have a LaTeX distribution instal
 make all
 ```
 
-This will generate `Resume-Mosfik.pdf`.
+This will generate `Resume_Md-Mosfikur-Rahman.pdf`.
 
 ### Clean
 
@@ -53,5 +53,5 @@ The repository includes a GitHub Actions workflow (`.github/workflows/build.yml`
 
 ## Accessing the Resume
 
-The resume can be accessed via the `index.html` file, which automatically redirects to the latest PDF version (`Resume-Mosfik.pdf`).
+The resume can be accessed via the `index.html` file, which automatically redirects to the latest PDF version (`Resume_Md-Mosfikur-Rahman.pdf`).
 
