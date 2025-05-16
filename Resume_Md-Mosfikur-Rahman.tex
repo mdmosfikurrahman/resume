@@ -12,7 +12,6 @@
 \usepackage[unicode, colorlinks, linkcolor=RoyalBlue, urlcolor=RoyalBlue, citecolor=RoyalBlue]{hyperref}
 \definecolor{RoyalBlue}{rgb}{0.25,0.41,0.88}
 
-% Page dimensions
 \geometry{
     left=1.27cm,
     right=1.27cm,
@@ -20,26 +19,27 @@
     bottom=1.27cm,
 }
 
-% Footer settings
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\footnotesize Updated On: \today}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\setlength{\footskip}{15pt}
+\setlength{\footskip}{15pt} % Add this line to set a suitable value for \footskip
 
 \urlstyle{same}
 
-% Text alignment
 \RaggedRight{}
 \setlength{\tabcolsep}{0in}
 
-% Section title formatting
+
 \titleformat{\section}{
-    \vspace{-4pt}\scshape\raggedright\Large
+    \vspace{-4pt}\scshape\raggedright\LARGE
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Custom commands
+\titleformat{\subsection}{
+    \vspace{-4pt}\scshape\raggedright\Large
+}{}{0em}{}
+
 \newcommand{\resumeItem}[1]{\item[$\bullet$] \small{#1 \vspace{-2pt}}}
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
@@ -49,15 +49,17 @@
 \newcommand{\resumeSubheading}[5]{
     \vspace{-1pt}\item
     \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{\href{#4}{#1}} & #2 \\
-    \textit{\small#3} & \textit{\small #5} \\
+    \textbf{\href{#4}{#1}} \& #2 \\
+    \textit{\small#3} \& \textit{\small #5} \\
     \end{tabular*}\vspace{-5pt}
 }
+\newcommand{\researchItem}[2]{%
+    \resumeItem{\hangindent=1.5em \hangafter=1 \justifying {#1}\\ \textit{#2}}%
+}
 
-% CV Start
 \begin{document}
+    \thispagestyle{empty}
 
-    % Title
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
         \textsc{\LARGE Md. Mosfikur Rahman} &                                                                                     \\
         Modhumoti, Sector-18                & Mobile: +880 1797-554948                                                            \\
@@ -65,32 +67,29 @@
         Bangladesh                          & Email: \href{mailto:mdmosfikurrahman.cse@gmail.com}{mdmosfikurrahman.cse@gmail.com} \\
     \end{tabular*}
 
-    % Education
 
-
-    \section{Education}
+    \section{Education}\label{sec:education}
     \resumeSubHeadingListStart
     \resumeSubheading
     {Daffodil International University}{Dhaka, Bangladesh}
     {Bachelor of Science in Computer Science and Engineering; CGPA: \textbf{3.83}}{https://daffodilvarsity.edu.bd/}{Jan. 2018 -- Dec. 2021}
     \resumeSubheading
-    {Adam Mickiewicz University}{Poznan, Poland}
-    {Exchange Program from Erusmus Mundus Scholarship; CGPA: \textbf{4.00}}{https://amu.edu.pl/en}{Mar. 2021 -- Aug. 2021}
+    {Adam Mickiewicz University}{Poznań, Poland}
+    {Erasmus+ Exchange Program in Computer Science; Completed \textbf{6 ECTS}}{https://amu.edu.pl/en}{Mar. 2021 -- Aug. 2021}
     \resumeSubHeadingListEnd
 
-    % Experience
 
-
-    \section{Experience}
+    \section{Experience}\label{sec:experience}
     \resumeSubHeadingListStart
     \resumeSubheading
     {Akij iBOS Ltd.}{Dhaka, Bangladesh}
-    {Software Engineer L-II}{https://ibos.io/}{Nov. 2024 - Present}
+    {Software Engineer L-II}{https://ibos.io/}{Nov. 2024 – Present}
     \resumeItemListStart
-    \resumeItem{Developed the Discount Workflow Engine, a backend system leveraging Camunda, Drools, and DMN.}
-    \resumeItem{Developed REST APIs for TrackForce using .NET Core, ensuring seamless integration and scalability.}
-    \resumeItem{Leading TrackForce's backend, frontend, and QA teams to optimize processes and enhance the system.}
+    \resumeItem{Leading the backend development of \textbf{Akij Air}, including system architecture, service design, and team coordination.}
+    \resumeItem{Developed scalable APIs and core modules using .NET Core and PostgreSQL.}
+    \resumeItem{Previously led the \textbf{TrackForce} team; built REST APIs and SQL Stored Procedures for reporting.}
     \resumeItemListEnd
+
     \resumeSubheading
     {REVE Systems Ltd.}{Dhaka, Bangladesh}
     {Software Engineer}{https://www.revesoft.com/}{Jul. 2023 - Oct. 2024}
@@ -101,7 +100,7 @@
     \resumeItemListEnd
     \resumeSubheading
     {BJIT Group}{Dhaka, Bangladesh}
-    {Software Engineer}{https://bjitgroup.com/}{Oct. 2021 - Jun. 2023}
+    {Software Engineer}{https://bjitgroup.com/}{Apr. 2022 - Jun. 2023}
     \resumeItemListStart
     \resumeItem{Implement JavaEE back-end/API using REST, SOAP, Spring, and microservices.}
     \resumeItem{Build enterprise apps using modern Java web frameworks and Thymeleaf.}
@@ -109,18 +108,23 @@
     \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-    % Projects
 
-
-    \section{Projects}
+    \section{Projects}\label{sec:projects}
     \resumeSubHeadingListStart
+    \resumeSubheading
+    {Akij Air Backend System}{}
+    {Akij iBOS Ltd.}{https://ibos.io/}{}
+    \resumeItemListStart
+    \resumeItem{Designed and developed the entire backend architecture using .NET Core and PostgreSQL.}
+    \resumeItem{Implemented partner onboarding, GDS integration, and modular service layers.}
+    \resumeItem{Led a cross-functional team ensuring robust performance and scalable deployment.}
+    \resumeItemListEnd
     \resumeSubheading
     {TrackForce}{}
     {Akij iBOS Ltd.}{https://app.trackforce.io/}{}
     \resumeItemListStart
-    \resumeItem{Developed and optimized backend services using .NET Core to ensure high performance and scalability.}
-    \resumeItem{Led the backend, frontend, and QA teams to streamline development and improve system reliability.}
-    \resumeItem{Implemented real-time tracking and automated reporting to boost efficiency.}
+    \resumeItem{Built REST APIs and reporting logic using .NET Core and SQL Stored Procedures.}
+    \resumeItem{Led backend and QA teams to streamline delivery and improve system reliability.}
     \resumeItemListEnd
     \resumeSubheading
     {Customs Bond Management System, NBR}{}
@@ -140,19 +144,58 @@
     \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-    % Programming Skills
 
-
-    \section{Programming Skills}
+    \section{Programming Skills}\label{sec:programming-skills}
     \resumeSubHeadingListStart
     \item{
-        \textbf{Core Skills:} OOP, Microservices, Process Automation, API Design \\
-        \textbf{Languages:} Java, JavaScript, Python \\
-        \textbf{Frameworks \& Tools:} Spring Boot, Docker, Angular, React \\
-        \textbf{Databases:} PostgreSQL, Oracle, MySQL, MongoDB \\
-        \textbf{Practices:} CI/CD, Git, Automated Testing, REST, GraphQL \\
-        \textbf{Other:} Agile, UML, JIRA, DataGrip
+        \textbf{Core Skills:} Backend Architecture, OOP, Microservices, API Design, Process Automation \\
+        \textbf{Languages:} Java, C\#, JavaScript, Python \\
+        \textbf{Frameworks \& Tools:} .NET Core, Spring Boot, Camunda, Thymeleaf, Docker \\
+        \textbf{Databases:} PostgreSQL, SQL Server, Oracle, MySQL, MongoDB \\
+        \textbf{Practices:} Stored Procedures, CI/CD, Git, REST, GraphQL, Agile, Scrum \\
+        \textbf{Other:} UML, JIRA, DataGrip, Camunda, Drools
     }
     \resumeSubHeadingListEnd
+
+
+    \section{Research \& Publications}\label{sec:research-&-publications}
+
+    \subsection{Journals}\label{subsec:journals}
+    \resumeItemListStart
+    \researchItem
+    {Impact of COVID-19 on mental health: A quantitative analysis of anxiety and depression based on regular life and internet use}
+    {Current Research in Behavioral Sciences, 2021, 2, 100037}
+    \researchItem
+    {COVID-19 and Bangladesh: Situation report, comparative analysis, and case study}
+    {Current Research in Behavioral Sciences, 2021, 2, 100034}
+    \researchItem
+    {Impactful e-learning framework: A new hybrid form of education}
+    {Current Research in Behavioral Sciences, 2021, 2, 100038}
+    \resumeItemListEnd
+
+    \subsection{Conferences}\label{subsec:conferences}
+    \resumeItemListStart
+    \researchItem
+    {Future City of Bangladesh: IoT Based Autonomous Smart Sewerage and Hazard Condition Sharing System}
+    {IEEE WIECON-ECE, 2020, pp. 126–130}
+    \researchItem
+    {Deep Learning Model for Detecting and Diagnosing Plant Disease}
+    {SMART GENCON, 2021, pp. 1–8}
+    \researchItem
+    {TraFoo: An Android Application for Food Delivery in Train}
+    {SMART GENCON, 2021, pp. 1–7}
+    \researchItem
+    {Pandemic Effect on Education System Among University Students}
+    {Springer: Progress in AI \& Robotics, 2022, pp. 157–168}
+    \researchItem
+    {Cyber Security Intruder Detection Using Deep Learning Approach}
+    {Springer: Info. Systems \& Mgmt. Science, 2023, pp. 518–530}
+    \researchItem
+    {A New Chaotic-Based Analysis of Data Encryption and Decryption}
+    {Springer: Advances in Data Science and AI, 2023, pp. 455–468}
+    \researchItem
+    {Machine Learning-Based Prediction of COVID-19: A Robust Approach for Early Diagnosis and Treatment}
+    {Springer: Trends in Computational and Cognitive Engineering, 2024, pp. 205–215}
+    \resumeItemListEnd
 
 \end{document}
