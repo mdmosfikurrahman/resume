@@ -12,6 +12,7 @@
 \usepackage[unicode, colorlinks, linkcolor=RoyalBlue, urlcolor=RoyalBlue, citecolor=RoyalBlue]{hyperref}
 \definecolor{RoyalBlue}{rgb}{0.25,0.41,0.88}
 
+% Page dimensions
 \geometry{
     left=1.27cm,
     right=1.27cm,
@@ -19,6 +20,7 @@
     bottom=1.27cm,
 }
 
+% Footer settings
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\footnotesize Updated On: \today}
@@ -28,10 +30,12 @@
 
 \urlstyle{same}
 
+% Text alignment
 \RaggedRight{}
 \setlength{\tabcolsep}{0in}
 
 
+% Section title formatting
 \titleformat{\section}{
     \vspace{-4pt}\scshape\raggedright\LARGE
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
@@ -40,6 +44,7 @@
     \vspace{-4pt}\scshape\raggedright\Large
 }{}{0em}{}
 
+% Custom commands
 \newcommand{\resumeItem}[1]{\item[$\bullet$] \small{#1 \vspace{-2pt}}}
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
@@ -49,17 +54,20 @@
 \newcommand{\resumeSubheading}[5]{
     \vspace{-1pt}\item
     \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{\href{#4}{#1}} \& #2 \\
-    \textit{\small#3} \& \textit{\small #5} \\
+    \textbf{\href{#4}{#1}} & #2 \\
+    \textit{\small#3} & \textit{\small #5} \\
     \end{tabular*}\vspace{-5pt}
 }
 \newcommand{\researchItem}[2]{%
     \resumeItem{\hangindent=1.5em \hangafter=1 \justifying {#1}\\ \textit{#2}}%
 }
 
+
+% CV Start
 \begin{document}
     \thispagestyle{empty}
 
+% Title
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
         \textsc{\LARGE Md. Mosfikur Rahman} &                                                                                     \\
         Modhumoti, Sector-18                & Mobile: +880 1797-554948                                                            \\
@@ -67,8 +75,10 @@
         Bangladesh                          & Email: \href{mailto:mdmosfikurrahman.cse@gmail.com}{mdmosfikurrahman.cse@gmail.com} \\
     \end{tabular*}
 
+% Education
 
-    \section{Education}\label{sec:education}
+
+    \section{Education}
     \resumeSubHeadingListStart
     \resumeSubheading
     {Daffodil International University}{Dhaka, Bangladesh}
@@ -78,8 +88,10 @@
     {Erasmus+ Exchange Program in Computer Science; Completed \textbf{6 ECTS}}{https://amu.edu.pl/en}{Mar. 2021 -- Aug. 2021}
     \resumeSubHeadingListEnd
 
+% Experience
 
-    \section{Experience}\label{sec:experience}
+
+    \section{Experience}
     \resumeSubHeadingListStart
     \resumeSubheading
     {Akij iBOS Ltd.}{Dhaka, Bangladesh}
@@ -108,8 +120,10 @@
     \resumeItemListEnd
     \resumeSubHeadingListEnd
 
+% Projects
 
-    \section{Projects}\label{sec:projects}
+
+    \section{Projects}
     \resumeSubHeadingListStart
     \resumeSubheading
     {Akij Air Backend System}{}
@@ -144,8 +158,10 @@
     \resumeItemListEnd
     \resumeSubHeadingListEnd
 
+% Programming Skills
 
-    \section{Programming Skills}\label{sec:programming-skills}
+
+    \section{Programming Skills}
     \resumeSubHeadingListStart
     \item{
         \textbf{Core Skills:} Backend Architecture, OOP, Microservices, API Design, Process Automation \\
@@ -158,9 +174,9 @@
     \resumeSubHeadingListEnd
 
 
-    \section{Research \& Publications}\label{sec:research-&-publications}
+    \section{Research \& Publications}
 
-    \subsection{Journals}\label{subsec:journals}
+    \subsection{Journals}
     \resumeItemListStart
     \researchItem
     {Impact of COVID-19 on mental health: A quantitative analysis of anxiety and depression based on regular life and internet use}
@@ -173,7 +189,7 @@
     {Current Research in Behavioral Sciences, 2021, 2, 100038}
     \resumeItemListEnd
 
-    \subsection{Conferences}\label{subsec:conferences}
+    \subsection{Conferences}
     \resumeItemListStart
     \researchItem
     {Future City of Bangladesh: IoT Based Autonomous Smart Sewerage and Hazard Condition Sharing System}
@@ -197,5 +213,6 @@
     {Machine Learning-Based Prediction of COVID-19: A Robust Approach for Early Diagnosis and Treatment}
     {Springer: Trends in Computational and Cognitive Engineering, 2024, pp. 205–215}
     \resumeItemListEnd
+
 
 \end{document}
