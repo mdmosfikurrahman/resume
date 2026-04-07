@@ -45,11 +45,13 @@
 }{}{0em}{}
 
 % Custom commands
-\newcommand{\resumeItem}[1]{\item[$\bullet$] \small{#1 \vspace{-2pt}}}
+\newcommand{\resumeItem}[1]{\item[$\bullet$] \small{#1}}
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{
+\begin{itemize}[leftmargin=*, itemsep=2pt, topsep=2pt, parsep=0pt]
+}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeSubheading}[5]{
     \vspace{-1pt}\item
@@ -59,67 +61,69 @@
     \end{tabular*}\vspace{-5pt}
 }
 \newcommand{\researchItem}[2]{%
-    \resumeItem{\hangindent=1.5em \hangafter=1 \justifying {#1}\\ \textit{#2}}%
+  \resumeItem{\hangindent=1.5em \hangafter=1 \justifying {#1}\\ \textit{#2}}%
 }
 
 
 % CV Start
 \begin{document}
-    \thispagestyle{empty}
+\thispagestyle{empty}
 
 % Title
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 	\textsc{\LARGE Md. Mosfikur Rahman} & \\
-    Modhumoti, Sector-18 & Mobile: +880 1797-554948 \\
-    Uttara, Dhaka & Portfolio: \href{https://mdmosfikurrahman.github.io/}{mdmosfikurrahman.github.io} \\
-    Bangladesh & Email: \href{mailto:mdmosfikurrahman.cse@gmail.com}{mdmosfikurrahman.cse@gmail.com} \\
-    \end{tabular*}
+	Modhumoti, Sector-18 & Mobile: +880 1797-554948 \\
+	Uttara, Dhaka, Bangladesh & Email: \href{mailto:mdmosfikurrahman.cse@gmail.com}{mdmosfikurrahman.cse@gmail.com} \\
+	
+\end{tabular*}
 
 % Education
-    \section{Education}
-    \resumeSubHeadingListStart
-    \resumeSubheading
-    {Daffodil International University}{Dhaka, Bangladesh}
-    {Bachelor of Science in Computer Science and Engineering; CGPA: \textbf{3.83}}{https://daffodilvarsity.edu.bd/}{Jan. 2018 -- Dec. 2021}
-    \resumeSubheading
-    {Adam Mickiewicz University}{Poznań, Poland}
-    {Erasmus+ Exchange Program in Computer Science; Completed \textbf{6 ECTS}}{https://amu.edu.pl/en}{Mar. 2021 -- Aug. 2021}
-    \resumeSubHeadingListEnd
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Daffodil International University}{Dhaka, Bangladesh}
+{Bachelor of Science in Computer Science and Engineering; CGPA: \textbf{3.83}}{https://daffodilvarsity.edu.bd/}{Jan. 2018 -- Dec. 2021}
+\resumeSubheading
+{Adam Mickiewicz University}{Poznań, Poland}
+{Erasmus+ Exchange Program in Computer Science; Completed \textbf{6 ECTS}}{https://amu.edu.pl/en}{Mar. 2021 -- Aug. 2021}
+\resumeSubHeadingListEnd
 
 % Experience
-    \section{Experience \normalsize{(4+ years)}}
-    \resumeSubHeadingListStart
+\section{Experience \normalsize{(4+ years)}}
+\resumeSubHeadingListStart
 
-    \resumeSubheading
-    {Akij iBOS Ltd.}{Dhaka, Bangladesh}
-    {Software Engineer L-II}{https://ibos.io/}{Nov. 2024 – Present}
-    \resumeItemListStart
-    \resumeItem{Owned end-to-end architecture for OTA Domain, covering supplier configuration, pricing rules, and workflows.}
-    \resumeItem{Designed and implemented a rule-based engine for context-aware decision making and dynamic evaluation.}
-    \resumeItem{Led backend design for supplier orchestration and aggregated response generation.}
-    \resumeItem{Worked with .NET, Node.js, and React while gaining hands-on experience in Docker and deployment workflows.}
-    \resumeItem{Defined service boundaries and domain models to ensure scalability and maintainability.}
-    \resumeItemListEnd
+\resumeSubheading
+{Akij iBOS Ltd.}{Dhaka, Bangladesh}
+{Software Engineer L-II}{https://ibos.io/}{Nov. 2024 – Present}
+\resumeItemListStart
+\resumeItem{Owned end-to-end architecture for OTA Domain, covering supplier configuration, pricing rules, and workflows.}
+\resumeItem{Designed and implemented a rule-based engine for context-aware decision making using Drools.}
+\resumeItem{Led backend design for supplier orchestration and aggregated response generation in a microservices architecture.}
+\resumeItem{Worked with Java, .NET, and Node.js across distributed services, focusing on scalable backend design.}
+\resumeItem{Deployed microservices using Docker and Kubernetes; worked with gRPC for inter-service communication.}
+\resumeItem{Utilized Azure (storage services) and AWS (email services) in production environments.}
+\resumeItem{Defined service boundaries and domain models to ensure scalability and maintainability.}
+\resumeItemListEnd
 
-    \resumeSubheading
-    {REVE Systems Ltd.}{Dhaka, Bangladesh}
-    {Software Engineer}{https://www.revesoft.com/}{Jul. 2023 – Oct. 2024}
-    \resumeItemListStart
-    \resumeItem{Developed full-stack applications using Spring Boot, Thymeleaf, React, and Oracle DB in a team environment.}
-    \resumeItem{Improved system throughput by 25\% through optimized data access and query performance tuning.}
-    \resumeItem{Implemented secure authentication and authorization using OAuth2 and Spring Security.}
-    \resumeItemListEnd
+\resumeSubheading
+{REVE Systems Ltd.}{Dhaka, Bangladesh}
+{Software Engineer}{https://www.revesoft.com/}{Jul. 2023 – Oct. 2024}
+\resumeItemListStart
+\resumeItem{Developed backend systems using Java, Spring Boot, and Oracle DB in a production environment.}
+\resumeItem{Improved system throughput by 25\% through optimized data access and query performance tuning.}
+\resumeItem{Implemented secure authentication and authorization using OAuth2 and Spring Security.}
+\resumeItem{Designed and maintained RESTful APIs following clean architecture principles.}
+\resumeItemListEnd
 
-    \resumeSubheading
-    {BJIT Group}{Dhaka, Bangladesh}
-    {Software Engineer (Backend – GraphQL BFF)}{https://bjitgroup.com/}{Apr. 2022 – Jun. 2023}
-    \resumeItemListStart
-    \resumeItem{Developed GraphQL-based Backend for Frontend (BFF) services using Java and Spring Boot.}
-    \resumeItem{Implemented efficient resolver logic, schema stitching, and batching for optimized nested queries.}
-    \resumeItem{Optimized database interactions to improve performance and scalability of backend services.}
-    \resumeItem{Contributed to reusable service patterns and internal tooling for consistent GraphQL schema design.}
-    \resumeItemListEnd
-
+\resumeSubheading
+{BJIT Group}{Dhaka, Bangladesh}
+{Software Engineer (Backend – Java \& GraphQL)}{https://bjitgroup.com/}{Apr. 2022 – Jun. 2023}
+\resumeItemListStart
+\resumeItem{Developed backend services using Java and Spring Boot for GraphQL-based BFF architecture.}
+\resumeItem{Implemented efficient resolver logic, batching, and schema stitching for optimized nested queries.}
+\resumeItem{Optimized database interactions to improve performance and scalability of backend services.}
+\resumeItem{Contributed to reusable backend service patterns and internal tooling.}
+\resumeItemListEnd
 
 % \resumeSubheading
 % {Daffodil International University}{Dhaka, Bangladesh}
@@ -130,105 +134,105 @@
 % \resumeItem{Provided mentorship and academic support to students.}
 % \resumeItemListEnd
 
-    \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
 % Projects
-    \section{Projects}
-    \resumeSubHeadingListStart
+\section{Projects}
+\resumeSubHeadingListStart
 
-    \resumeSubheading
-    {OTA Backend System}{}
-    {Akij iBOS Ltd.}{https://ibos.io/}{}
-    \resumeItemListStart
-    \resumeItem{Owned end-to-end architecture for OTA Domain, covering booking flows, supplier integration, and workflows.}
-    \resumeItem{Defined system modules, service boundaries, and interaction patterns for a scalable backend system.}
-    \resumeItem{Designed service interfaces, data models, and integration strategies across multiple domain components.}
-    \resumeItemListEnd
+\resumeSubheading
+{OTA Backend System}{}
+{Akij iBOS Ltd.}{https://ibos.io/}{}
+\resumeItemListStart
+\resumeItem{Built microservices-based OTA system for booking, pricing, and supplier integration.}
+\resumeItem{Designed service boundaries and domain models for scalable architecture.}
+\resumeItem{Implemented supplier orchestration and real-time response aggregation.}
+\resumeItem{Integrated customized rule engine for dynamic pricing and workflows.}
+\resumeItemListEnd
 
-    \resumeSubheading
-    {TrackForce}{}
-    {Akij iBOS Ltd.}{https://app.trackforce.io/}{}
-    \resumeItemListStart
-    \resumeItem{Developed REST APIs for real-time tracking of personnel and shipment.}
-    \resumeItem{Integrated SQL-based reporting to improve analytics for field teams.}
-    \resumeItem{Enhanced code testability via refactored legacy logic and unit test support.}
-    \resumeItemListEnd
+% \resumeSubheading
+% {TrackForce}{}
+% {Akij iBOS Ltd.}{https://app.trackforce.io/}{}
+% \resumeItemListStart
+% \resumeItem{Developed REST APIs for real-time tracking of personnel and shipment.}
+% \resumeItem{Integrated SQL-based reporting to improve analytics for field teams.}
+% \resumeItem{Enhanced code testability via refactored legacy logic and unit test support.}
+% \resumeItemListEnd
 
-    \resumeSubheading
-    {Customs Bond Management System}{}
-    {REVE Systems Ltd.}{https://cusbond.gov.bd/}{}
-    \resumeItemListStart
-    \resumeItem{Worked on Legal Case and UD (Utilization Declaration) modules.}
-    \resumeItem{Built BGMEA/BKMEA DB sync for garment export compliance.}
-    \resumeItemListEnd
+\resumeSubheading
+{Customs Bond Management System}{}
+{REVE Systems Ltd.}{https://cusbond.gov.bd/}{}
+\resumeItemListStart
+\resumeItem{Worked on Legal Case and UD (Utilization Declaration) modules.}
+\resumeItem{Built BGMEA/BKMEA DB sync for garment export compliance.}
+\resumeItemListEnd
 
-    \resumeSubheading
-    {Rakuten Echiba Backend}{}
-    {BJIT Group}{https://www.rakuten.co.jp/}{}
-    \resumeItemListStart
-    \resumeItem{Designed GraphQL BFF for e-commerce modules including product and order systems.}
-    \resumeItem{Reduced query latency by optimizing resolver logic and database join paths.}
-    \resumeItem{Contributed to internal tooling and reusable service patterns for consistent GraphQL schema design.}
-    \resumeItemListEnd
+\resumeSubheading
+{Rakuten Echiba Backend}{}
+{BJIT Group}{https://www.rakuten.co.jp/}{}
+\resumeItemListStart
+\resumeItem{Designed GraphQL BFF for e-commerce modules including product and order systems.}
+\resumeItem{Reduced query latency by optimizing resolver logic and database join paths.}
+\resumeItem{Contributed to internal tooling and reusable service patterns for consistent GraphQL schema design.}
+\resumeItemListEnd
 
-    \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
 % Programming Skills
-    \section{Programming Skills}
-    \resumeSubHeadingListStart
-    \item{
-        \textbf{Languages:} Java, C\#, JavaScript, SQL, Python \\
-        \textbf{Backend:} Spring Boot, .NET, Node.js, Spring Security, JPA/JDBC, GraphQL \\
-        \textbf{Frontend:} React (integration level), Thymeleaf \\
-        \textbf{Architecture:} Microservices, REST, API Design, Modular Monolith \\
-        \textbf{Databases:} Oracle SQL, PostgreSQL, SQL Server, MySQL \\
-        \textbf{Tools:} Docker, CI/CD, Git \\
-        \textbf{Technologies:} OAuth2, JWT, Camunda, Drools \\
-        \textbf{Concepts:} OOP, Design Patterns, Query Optimization, Secure APIs \\
-        \textbf{Operating Systems:} Linux/Unix
-    }
-    \resumeSubHeadingListEnd
+\section{Technical Skills}
+\resumeSubHeadingListStart
+\item{
+\textbf{Languages:} Java, C\#, JavaScript, SQL, Python \\
+\textbf{Backend:} Spring Boot, Spring Security, JPA/JDBC, GraphQL, .NET, Node.js \\
+\textbf{Architecture:} Microservices, REST APIs, Distributed Systems, Modular Monolith \\
+\textbf{Cloud \& DevOps:} AWS (Email Services), Azure (Storage Services), Docker, Kubernetes, CI/CD \\
+\textbf{Databases:} Oracle, PostgreSQL, SQL Server, MySQL \\
+\textbf{Technologies:} OAuth2, JWT, gRPC, Camunda, Drools \\
+\textbf{Concepts:} OOP, Design Patterns, Clean Architecture, Query Optimization, Secure APIs \\
+\textbf{Tools:} Git, Linux/Unix
+}
+\resumeSubHeadingListEnd
 
 
-    \section{Research \& Publications}
+\section{Research \& Publications}
 
-    \subsection{Journals}
-    \resumeItemListStart
-    \researchItem
-    {Impact of COVID-19 on mental health: A quantitative analysis of anxiety and depression based on regular life and internet use}
-    {Current Research in Behavioral Sciences, 2021, 2, 100037}
-    \researchItem
-    {COVID-19 and Bangladesh: Situation report, comparative analysis, and case study}
-    {Current Research in Behavioral Sciences, 2021, 2, 100034}
-    \researchItem
-    {Impactful e-learning framework: A new hybrid form of education}
-    {Current Research in Behavioral Sciences, 2021, 2, 100038}
-    \resumeItemListEnd
+\subsection{Journals}
+\resumeItemListStart
+\researchItem
+{Impact of COVID-19 on mental health: A quantitative analysis of anxiety and depression based on regular life and internet use}
+{Current Research in Behavioral Sciences, 2021, 2, 100037}
+\researchItem
+{COVID-19 and Bangladesh: Situation report, comparative analysis, and case study}
+{Current Research in Behavioral Sciences, 2021, 2, 100034}
+\researchItem
+{Impactful e-learning framework: A new hybrid form of education}
+{Current Research in Behavioral Sciences, 2021, 2, 100038}
+\resumeItemListEnd
 
-    \subsection{Conferences}
-    \resumeItemListStart
-    \researchItem
-    {Future City of Bangladesh: IoT Based Autonomous Smart Sewerage and Hazard Condition Sharing System}
-    {IEEE WIECON-ECE, 2020}
-    \researchItem
-    {Cyber Security Intruder Detection Using Deep Learning Approach}
-    {Springer: Info. Systems \& Mgmt. Science, 2023}
-    \researchItem
-    {A New Chaotic-Based Analysis of Data Encryption and Decryption}
-    {Springer: Advances in Data Science and AI, 2023}
-    \researchItem
-    {Machine Learning-Based Prediction of COVID-19: A Robust Approach for Early Diagnosis and Treatment}
-    {Springer: Trends in Computational and Cognitive Engineering, 2024}
-    \resumeItemListEnd
+\subsection{Conferences}
+\resumeItemListStart
+\researchItem
+{Future City of Bangladesh: IoT Based Autonomous Smart Sewerage and Hazard Condition Sharing System}
+{IEEE WIECON-ECE, 2020}
+\researchItem
+{Cyber Security Intruder Detection Using Deep Learning Approach}
+{Springer: Info. Systems \& Mgmt. Science, 2023}
+\researchItem
+{A New Chaotic-Based Analysis of Data Encryption and Decryption}
+{Springer: Advances in Data Science and AI, 2023}
+\researchItem
+{Machine Learning-Based Prediction of COVID-19: A Robust Approach for Early Diagnosis and Treatment}
+{Springer: Trends in Computational and Cognitive Engineering, 2024}
+\resumeItemListEnd
 
 
-    \section{Extra-curricular Activities}
-    \resumeItemListStart
-    \researchItem{\textbf{Conference Speaker}}{Delivered a technical session at the 10th IEEE International Women in Engineering (WIE) Conference on Electrical and Computer Engineering 2024 (IEEE WIECON-ECE 2024).}
-    \researchItem{\textbf{Guest Speaker}}{Presented a talk on “How to Get Started: Undergraduate Research Journey” organized by the Computer \& Programming Club, Daffodil International University.}
-    \researchItem{\textbf{Vice President, Research \& Career Wing}}{Led mentorship programs, research workshops, and career initiatives at the Computer \& Programming Club, Daffodil International University (2021).}
-    \researchItem{\textbf{Technical Lead, “Take Off – 2020”}}{Managed technical operations and project logistics for the university-wide tech event.}
-    \researchItem{\textbf{Organizing Member, “Take Off – 2019”}} {Contributed to event planning and programming contest organization for the annual tech competition.}
-    \resumeItemListEnd
+\section{Extra-curricular Activities}
+\resumeItemListStart
+\researchItem{\textbf{Conference Speaker}}{Delivered a technical session at the 10th IEEE International Women in Engineering (WIE) Conference on Electrical and Computer Engineering 2024 (IEEE WIECON-ECE 2024).}
+\researchItem{\textbf{Guest Speaker}}{Presented a talk on “How to Get Started: Undergraduate Research Journey” organized by the Computer \& Programming Club, Daffodil International University.}
+\researchItem{\textbf{Vice President, Research \& Career Wing}}{Led mentorship programs, research workshops, and career initiatives at the Computer \& Programming Club, Daffodil International University (2021).}
+\researchItem{\textbf{Technical Lead, “Take Off – 2020”}}{Managed technical operations and project logistics for the university-wide tech event.}
+\researchItem{\textbf{Organizing Member, “Take Off – 2019”}} {Contributed to event planning and programming contest organization for the annual tech competition.}
+\resumeItemListEnd
 
 \end{document}
