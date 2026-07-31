@@ -47,7 +47,7 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{\item[$\bullet$] \small{#1}}
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=10pt, topsep=2pt, parsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{
 \begin{itemize}[leftmargin=*, itemsep=2pt, topsep=2pt, parsep=0pt]
@@ -70,34 +70,19 @@
 
 % Title
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\textsc{\LARGE Md. Mosfikur Rahman} & Mobile: +880 1797-554948 \\
-	Software Engineer $|$ Applied ML \& Backend Systems & Email: \href{mailto:mdmosfikurrahman.cse@gmail.com}{mdmosfikurrahman.cse@gmail.com} \\
-\end{tabular*}
-
-\vspace{2pt}
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textsc{\LARGE Md. Mosfikur Rahman} & \\[4pt]
+	Senior Software Engineer $|$ .NET \& Java Backend Systems & Mobile: +880 1797-554948 \\[4pt]
 	\href{https://github.com/mdmosfikurrahman}{\faGithub\ GitHub} \ $|$ \
 	\href{https://linkedin.com/in/mdmosfikurrahman}{\faLinkedin\ LinkedIn} \ $|$ \
 	\href{https://mdmosfikurrahman.github.io}{\faGlobe\ Portfolio} \ $|$ \
-	\href{https://scholar.google.com/citations?user=1GAfMAEAAAAJ}{\faGraduationCap\ Google Scholar} & \\
+	\href{https://scholar.google.com/citations?user=1GAfMAEAAAAJ}{\faGraduationCap\ Google Scholar} & Email: \href{mailto:mdmosfikurrahman.cse@gmail.com}{mdmosfikurrahman.cse@gmail.com} \\
 \end{tabular*}
 
 % Summary
 \section{Summary}
 \vspace{2pt}
-\small{Software engineer with 4+ years of production backend experience (microservices, rule engines, distributed data pipelines) and a research record of 10 peer-reviewed publications in applied machine learning and data analysis. Comfortable across the full path from messy real-world data to systems that run at scale.}
+\small{Backend engineer with 4+ years building production microservices in .NET and Java (Spring Boot) for a live OTA platform, covering supplier orchestration, cross-service scheduler workflows, and the infrastructure behind them. Also work across the frontend and DevOps side when a feature needs it end-to-end. Background includes 10 peer-reviewed publications in applied machine learning.}
 \vspace{-2pt}
-
-% Education
-\section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Daffodil International University}{Dhaka, Bangladesh}
-{B.Sc. in Computer Science and Engineering --- CGPA: \textbf{3.83/4.00}}{https://daffodilvarsity.edu.bd/}{2018 -- 2021}
-\resumeSubheading
-{Adam Mickiewicz University}{Pozna\'n, Poland}
-{Erasmus+ International Exchange (one semester)}{https://amu.edu.pl/en}{2021}
-\resumeSubHeadingListEnd
 
 % Experience
 \section{Experience \normalsize{(4+ years)}}
@@ -105,12 +90,13 @@
 
 \resumeSubheading
 {Akij iBOS Ltd.}{Dhaka, Bangladesh}
-{Software Engineer L-II}{https://ibos.io/}{Nov. 2024 -- Present}
+{Software Engineer L-II (Team Lead)}{https://ibos.io/}{Nov. 2024 -- Present}
 \resumeItemListStart
-\resumeItem{Own end-to-end architecture for the Online Travel Agency (OTA) domain --- supplier configuration, pricing rules, and booking workflows.}
-\resumeItem{Designed a Drools-based rule engine for context-aware pricing and decision-making.}
-\resumeItem{Led backend design for supplier orchestration and aggregated response generation in a microservices architecture (Java, .NET, Node.js).}
-\resumeItem{Deployed services with Docker and Kubernetes; used gRPC for inter-service communication and Azure/AWS in production.}
+\resumeItem{Backend architect for Travilo, an OTA platform, owning end-to-end design across 7 .NET 9 microservices for supplier configuration, pricing rules, and booking workflows.}
+\resumeItem{Lead the backend and frontend engineering teams end-to-end; personally guide the DevOps team through infrastructure setup for every new client onboarding.}
+\resumeItem{Built a cross-service booking expiration/cancellation scheduler (gRPC + REST across Reservation, Configuration, and Notification services) that auto-expires unticketed bookings and keeps partner-facing state in sync.}
+\resumeItem{Built the flight-search pipeline: Reservation fans out over gRPC to AirMaster, which aggregates responses from downstream suppliers, and streams progressive results to the frontend via Server-Sent Events (SSE).}
+\resumeItem{Deployed with Docker for local development and Kubernetes for client-facing cloud environments; used Azure for CI/CD pipelines, Kubernetes-pod deployment, and storage, and AWS for transactional email.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -125,7 +111,7 @@
 
 \resumeSubheading
 {BJIT Group}{Dhaka, Bangladesh}
-{Software Engineer (Backend --- Java \& GraphQL)}{https://bjitgroup.com/}{Apr. 2022 -- Jun. 2023}
+{Software Engineer (Backend, Java \& GraphQL)}{https://bjitgroup.com/}{Apr. 2022 -- Jun. 2023}
 \resumeItemListStart
 \resumeItem{Built GraphQL Backend-for-Frontend services for Rakuten e-commerce modules using Java and Spring Boot.}
 \resumeItem{Implemented resolver batching and schema stitching, reducing nested-query latency.}
@@ -139,23 +125,34 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{OTA Backend System}{}
-{Akij iBOS Ltd.}{https://ibos.io/}{}
+{Travilo (OTA Booking Platform)}{}
+{Akij iBOS Ltd.}{https://travilo.io/}{Stack: .NET 9, Microservices, SQL Server, gRPC, REST, GraphQL, SSE}
 \resumeItemListStart
-\resumeItem{Microservices-based travel platform for booking, pricing, and supplier integration with a Drools pricing engine.}
-\resumeItem{Designed service boundaries and domain models for scalable, maintainable architecture.}
+\resumeItem{Backend architect for a live B2B travel platform with $\sim$10 clients (4 onboarded, 6 onboarding) and an average of 10K partner accounts each, across 7 .NET 9 microservices.}
+\resumeItem{Exposed REST and GraphQL APIs for partner integration, including IP-whitelisted GraphQL access for API-only clients.}
+\resumeItem{Built a cross-service booking expiration/cancellation scheduler (gRPC + REST across Reservation, Configuration, and Notification services) that keeps partner-facing state in sync.}
+\resumeItem{Built the flight-search pipeline: gRPC fan-out from Reservation to AirMaster, aggregating downstream suppliers and streaming progressive results via Server-Sent Events (SSE).}
+\resumeItemListEnd
+
+\resumeSubheading
+{TrackForce (Employee Activity Monitoring)}{}
+{Akij iBOS Ltd.}{https://trackforce.io/}{Stack: ASP.NET Core, Rust, Time-Series Storage}
+\resumeItemListStart
+\resumeItem{Architected TrackForce, a real-time employee-activity monitoring platform for 500+ employees, designing the end-to-end data flow from the on-device agent through ingestion, storage, and the reporting dashboard.}
+\resumeItem{Defined the API and service boundaries between the ingestion pipeline and the storage/reporting layers so implementation could proceed against a fixed contract.}
 \resumeItemListEnd
 
 \resumeSubheading
 {Customs Bond Management System (NBR)}{}
-{REVE Systems Ltd.}{https://cusbond.gov.bd/}{}
+{REVE Systems Ltd.}{https://cusbond.gov.bd/}{Stack: Java, Spring Boot, Thymeleaf, Oracle}
 \resumeItemListStart
 \resumeItem{Legal Case and Utilization Declaration modules; BGMEA/BKMEA sync for garment-export compliance.}
+\resumeItem{Built audit-trail logging and role-based access control for the platform.}
 \resumeItemListEnd
 
 \resumeSubheading
 {Rakuten Echiba Backend}{}
-{BJIT Group}{https://www.rakuten.co.jp/}{}
+{BJIT Group}{https://www.rakuten.co.jp/}{Stack: Java, Spring Boot, GraphQL}
 \resumeItemListStart
 \resumeItem{GraphQL BFF for e-commerce modules; reduced query latency via resolver and join-path optimization.}
 \resumeItemListEnd
@@ -166,19 +163,32 @@
 \section{Technical Skills}
 \resumeSubHeadingListStart
 \item{
-\textbf{Languages:} Java, C\#, JavaScript, SQL, Python \\
-\textbf{Backend:} Spring Boot, Spring Security, JPA/JDBC, GraphQL, .NET, Node.js \\
-\textbf{Architecture:} Microservices, REST APIs, Distributed Systems, Modular Monolith \\
-\textbf{Cloud \& DevOps:} AWS, Azure, Docker, Kubernetes, CI/CD \\
-\textbf{Databases:} Oracle, PostgreSQL, SQL Server, MySQL \\
-\textbf{Technologies:} OAuth2, JWT, gRPC, Camunda, Drools \\
-\textbf{Concepts:} OOP, Design Patterns, Clean Architecture, Query Optimization, Secure APIs \\
+\small{
+\textbf{Languages:} Java, C\#, TypeScript/JavaScript, SQL, Python \\[2pt]
+\textbf{Java Backend:} Spring Boot, Spring Security, Spring Data JPA/Hibernate, Spring GraphQL \\[2pt]
+\textbf{.NET Backend:} ASP.NET Core (.NET 9), Entity Framework Core, HotChocolate GraphQL \\[2pt]
+\textbf{Architecture:} Microservices, Clean/Layered Architecture, Domain-Driven Design, REST APIs, gRPC, SSE \\[2pt]
+\textbf{Cloud \& DevOps:} AWS, Azure, Docker, Kubernetes, CI/CD (GitHub Actions) \\[2pt]
+\textbf{Databases:} PostgreSQL, SQL Server, MySQL, Oracle \\[2pt]
+\textbf{Frontend:} Next.js, React, Ant Design, Tailwind \\[2pt]
+\textbf{Concepts:} OAuth2/JWT, Design Patterns, RBAC \& Secure APIs, Query Optimization \\[2pt]
 \textbf{Tools:} Git, Linux/Unix
-}
+}}
 \resumeSubHeadingListEnd
 
-\section{Research \& Publications}
-\small{10 peer-reviewed publications (3 journal, 7 conference). $\dagger$ = first author.}
+% Education
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Daffodil International University}{Dhaka, Bangladesh}
+{B.Sc. in Computer Science and Engineering, CGPA: \textbf{3.83/4.00}}{https://daffodilvarsity.edu.bd/}{2018 -- 2021}
+\resumeSubheading
+{Adam Mickiewicz University}{Pozna\'n, Poland}
+{Erasmus+ International Exchange (one semester)}{https://amu.edu.pl/en}{2021}
+\resumeSubHeadingListEnd
+
+\section{Selected Research \& Publications}
+\small{Selected from 10 peer-reviewed publications (3 journal, 7 conference). $\dagger$ = first author.}
 \vspace{2pt}
 
 \subsection{Journals}
@@ -199,24 +209,11 @@
 \researchItem
 {$\dagger$ Future City of Bangladesh: IoT Based Autonomous Smart Sewerage and Hazard Condition Sharing System}
 {IEEE WIECON-ECE, 2020}
-\researchItem
-{$\dagger$ TraFoo: An Android Application for Food Delivery in Train}
-{IEEE SMART GENCON, 2021}
-\researchItem
-{Cyber Security Intruder Detection Using Deep Learning Approach}
-{Springer: Information Systems \& Management Science, 2023}
-\researchItem
-{A New Chaotic-Based Analysis of Data Encryption and Decryption}
-{Springer: Advances in Data Science and AI, 2023}
-\researchItem
-{Machine Learning-Based Prediction of COVID-19: A Robust Approach for Early Diagnosis and Treatment}
-{Springer: Trends in Computational and Cognitive Engineering, 2024}
 \resumeItemListEnd
 
 \section{Extra-curricular Activities}
 \resumeItemListStart
 \researchItem{\textbf{Conference Speaker}}{Delivered a technical session at the 10th IEEE International Women in Engineering (WIE) Conference on Electrical and Computer Engineering 2024 (IEEE WIECON-ECE 2024).}
-\researchItem{\textbf{Guest Speaker}}{``How to Get Started: Undergraduate Research Journey'', Computer \& Programming Club, Daffodil International University.}
 \researchItem{\textbf{Vice President, Research \& Career Wing}}{Led mentorship programs, research workshops, and career initiatives at the Computer \& Programming Club, DIU (2021).}
 \researchItem{\textbf{Journal Reviewer}}{Reviewer for several Elsevier/Springer journals and international conferences in ML and data science.}
 \resumeItemListEnd
