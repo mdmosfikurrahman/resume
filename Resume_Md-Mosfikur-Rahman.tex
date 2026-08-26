@@ -80,22 +80,24 @@
 % Summary
 \section{Summary}
 \vspace{2pt}
-\small{\justifying Senior Backend Engineer with 4+ years of production experience across .NET and Java (Spring Boot) ecosystems, currently owning end-to-end backend architecture for a multi-client OTA booking SaaS platform spanning 7 .NET 9 microservices. Design distributed, service-oriented systems -- REST, GraphQL, gRPC, and SSE APIs -- and provide technical direction and mentorship across backend, frontend, and DevOps. Prior experience spans government compliance systems (Java, Spring Boot, Oracle) and e-commerce platforms (GraphQL BFF for Rakuten), with production deployments on Docker, Kubernetes, Azure, and AWS. Grounded in a research background of 10 peer-reviewed publications in applied machine learning.}
+\small{\justifying Senior Backend Engineer with 4+ years of production experience across .NET and Java (Spring Boot) ecosystems, currently owning end-to-end backend architecture for a multi-tenant OTA booking SaaS platform spanning 7 .NET 9 microservices -- taken from an empty repository to two live white-label client deployments in 13 months. Lead a team of 10 engineers as principal author of the platform backend. Design distributed, service-oriented systems -- REST, GraphQL, gRPC, and SSE APIs -- and provide technical direction and mentorship across backend, frontend, and DevOps. Prior experience spans government compliance systems (Java, Spring Boot, Oracle) and e-commerce platforms (GraphQL BFF for Rakuten), with production deployments on Docker, Kubernetes, Azure, and AWS. Grounded in a research background of 10 peer-reviewed publications in applied machine learning.}
 \vspace{-2pt}
 
 % Experience
-\section{Experience \normalsize{(4+ years)}}
+\section{Experience}
 \resumeSubHeadingListStart
 
 \resumeSubheading
 {Akij iBOS Ltd.}{Dhaka, Bangladesh}
 {Software Engineer L-II (Team Lead)}{https://ibos.io/}{Nov. 2024 -- Present}
 \resumeItemListStart
-\resumeItem{Backend architect for Travilo, a multi-client OTA booking SaaS platform, owning end-to-end design across 7 .NET 9 microservices for supplier configuration, pricing/markup/discount rules, ancillary services, and booking workflows.}
-\resumeItem{Provide technical leadership across backend, frontend, and DevOps -- personally training and mentoring junior engineers, running daily scrum/sprint planning, and conducting code reviews and pair programming that established standardized backend patterns for consistent, faster client onboarding.}
+\resumeItem{Backend architect for Travilo, a multi-tenant OTA booking SaaS platform, owning end-to-end design across 7 .NET 9 microservices for supplier configuration, pricing/markup/discount rules, ancillary services, and booking workflows; principal author of the platform backend and top contributor on six of the seven services.}
+\resumeItem{Lead a team of 10 engineers across backend, frontend, and DevOps -- personally training and mentoring junior engineers, running daily scrum/sprint planning, and conducting code reviews and pair programming that established standardized backend patterns; the second white-label client went live six weeks after the first.}
+\resumeItem{Own the admin control plane -- 58 modules across 167 routes, with a role-based access model spanning 175 menus and 55 roles -- giving operations teams tenant-level control of pricing, ancillary services, finance, and booking workflows.}
 \resumeItem{Built a cross-service booking expiration/cancellation scheduler (gRPC + REST across Reservation, Configuration, and Notification services) that auto-expires unticketed bookings and keeps partner-facing state in sync.}
-\resumeItem{Designed the flight-search pipeline: Reservation fans out over gRPC to AirMaster, which aggregates responses from downstream suppliers, and streams progressive results to the frontend via Server-Sent Events (SSE).}
-\resumeItem{Deploy with Docker for local development and Kubernetes for client-facing cloud environments; use Azure for CI/CD, Kubernetes-pod deployment, and storage, and AWS for transactional email; provide on-call production support, including weekend/emergency response, for platform uptime.}
+\resumeItem{Designed the flight-search aggregation layer over 11 supplier and GDS connectors (Sabre, Amadeus, Travelport, and airline-direct APIs): Reservation fans out over gRPC to AirMaster, which aggregates downstream responses, and streams progressive results to the frontend via Server-Sent Events (SSE).}
+\resumeItem{Built the platform's observability layer -- middleware capturing every incoming and inter-service call (method, path, status, duration, payloads) to blob storage behind a unified Azure/AWS/Cloudflare storage abstraction -- now holding 36,000+ structured log objects in production and used daily for production debugging and on-call triage.}
+\resumeItem{Deploy with Docker for local development and Kubernetes for client-facing cloud environments; use Azure for CI/CD, Kubernetes-pod deployment, and storage, and AWS for transactional email; provide on-call production support, including weekend/emergency response, as booking volume grows past 1,000 per month.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -125,15 +127,15 @@
 
 \resumeSubheading
 {Travilo (OTA Booking Platform)}{}
-{Akij iBOS Ltd.}{https://travilo.io/}{Stack: .NET 9, SQL Server, Microservices, DynamoDB, gRPC, GraphQL}
+{Akij iBOS Ltd.}{https://travilo.io/}{Stack: .NET 9, SQL Server, Microservices, DynamoDB, gRPC, GraphQL, SSE}
 \resumeItemListStart
-\resumeItem{Backend architect for a live travel platform spanning B2B, B2C, and API-only/consortium clients -- $\sim$10 clients (4 onboarded, 6 onboarding) with an average of 10K accounts each, across 7 .NET 9 microservices.}
-\resumeItem{Exposed REST and GraphQL APIs for partner integration, including IP-whitelisted GraphQL access for API-only clients, plus an admin panel for centralized platform management.}
+\resumeItem{Backend architect for a live travel platform spanning B2B, B2C, and API-only/consortium distribution -- two white-label client deployments in production serving 742 B2B agency accounts across 7 .NET 9 microservices.}
+\resumeItem{Exposed REST and GraphQL APIs for partner integration, including IP-whitelisted GraphQL access for API-only clients, plus an admin panel for centralized platform management; pricing, markup, discount, and ancillary logic is modelled as tenant configuration rather than code -- 96 rules live -- so commercial changes ship without a deployment.}
 \resumeItemListEnd
 
 \resumeSubheading
 {TrackForce (Employee Activity Monitoring)}{}
-{Akij iBOS Ltd.}{https://trackforce.io/}{Stack: ASP.NET Core, Rust, Time-Series Storage}
+{Akij iBOS Ltd.}{https://trackforce.io/}{Stack: ASP.NET Core, Time-Series Storage}
 \resumeItemListStart
 \resumeItem{Architected TrackForce, a real-time employee-activity monitoring platform for 500+ employees, designing the end-to-end data flow from the on-device agent through ingestion, storage, and the reporting dashboard.}
 \resumeItem{Defined the API and service boundaries between the ingestion pipeline and the storage/reporting layers so implementation could proceed against a fixed contract.}
@@ -170,7 +172,7 @@
 \textbf{Cloud \& DevOps} & AWS, Azure, Docker, Kubernetes, CI/CD (GitHub Actions), Azure Monitor/App Insights, ELK/Seq \\[6pt]
 \textbf{Databases} & PostgreSQL, SQL Server, MySQL, Oracle, MongoDB, DynamoDB \\[6pt]
 \textbf{Frontend} & Next.js, React, AngularJS, Ant Design, Tailwind \\[6pt]
-\textbf{Domains} & SaaS Platforms, Multi-tenant Systems, E-commerce, Government Compliance Systems \\[6pt]
+\textbf{Domains} & Online Travel Agency (OTA) \& Booking Systems, GDS/Supplier Integration, PNR \& Ticketing Workflows, SaaS Platforms, Multi-tenant Systems, E-commerce, Government Compliance Systems \\[6pt]
 \textbf{Concepts} & OAuth2/JWT, Design Patterns, RBAC \& Secure APIs, Query \& Performance Optimization, Agile/Scrum, Pair Programming \\[6pt]
 \textbf{Tools} & Git, Linux/Unix \\
 \end{tabular}
@@ -188,10 +190,20 @@
 {Erasmus+ International Exchange (one semester)}{https://amu.edu.pl/en}{2021}
 \resumeSubHeadingListEnd
 
+\newpage
 \section{Research \& Publications}
 \resumeSubHeadingListStart
-\item{\small{10 peer-reviewed publications (3 journal, 7 conference) in applied machine learning -- health analytics and IoT systems; 2 as first author. Full list on \href{https://scholar.google.com/citations?user=1GAfMAEAAAAJ}{Google Scholar}.}}
+\item{\small{10 peer-reviewed publications (3 journal, 7 conference) in applied machine learning -- health analytics, IoT systems, and security; 2 as first author. Reviewer for \textit{ISA Transactions}, \textit{Journal of King Saud University -- Computer and Information Sciences}, and \textit{Natural Language Processing Journal}. Selected work:}}
 \resumeSubHeadingListEnd
+\resumeItemListStart
+\researchItem{\textbf{Rahman, Md. Mosfikur}, Kashem, M. A., Mohiuddin, M., Hossain, M. A., \& Moon, N. N. (2020). ``Future City of Bangladesh: IoT Based Autonomous Smart Sewerage and Hazard Condition Sharing System.'' \textit{Proc. 2020 IEEE Intl. Women in Engineering Conf. on Electrical and Computer Engineering (WIECON-ECE)}, pp. 126--130.}{\textbf{IEEE Best Paper Award} $\cdot$ First author $\cdot$ \href{https://doi.org/10.1109/WIECON-ECE52138.2020.9397950}{10.1109/WIECON-ECE52138.2020.9397950}}
+\researchItem{\textbf{Rahman, Md. Mosfikur}, Saifuzzaman, M., Ahmed, A., Mahin, M. F., \& Shetu, S. F. (2021). ``Impact of COVID-19 on mental health: A quantitative analysis of anxiety and depression based on regular life and internet use.'' \textit{Current Research in Behavioral Sciences} (Elsevier), 2:100037.}{First author $\cdot$ Journal $\cdot$ \href{https://doi.org/10.1016/j.crbeha.2021.100037}{10.1016/j.crbeha.2021.100037}}
+\researchItem{Shetu, S. F., \textbf{Rahman, Md. Mosfikur}, Ahmed, A., Mahin, M. F., Akib, M. A. U., \& Saifuzzaman, M. (2021). ``Impactful e-learning framework: A new hybrid form of education.'' \textit{Current Research in Behavioral Sciences} (Elsevier), 2:100038.}{Most-cited work $\cdot$ Journal $\cdot$ \href{https://doi.org/10.1016/j.crbeha.2021.100038}{10.1016/j.crbeha.2021.100038}}
+\researchItem{Islam, T., \textbf{Rahman, Md. Mosfikur}, Jabiullah, M. I., \& Saifuzzaman, M. (2023). ``Cyber Security Intruder Detection Using Deep Learning Approach.'' \textit{Information Systems and Management Science}, Springer International, pp. 518--530.}{Deep-learning intrusion detection on CICIDS2017 $\cdot$ \href{https://doi.org/10.1007/978-3-031-13150-9_42}{10.1007/978-3-031-13150-9\_42}}
+\researchItem{Johora, F. T., Mahfuja, I. B., Rahman, A. N. M. M., \textbf{Rahman, Md. Mosfikur}, \& Rahman, M. S. (2024). ``Machine Learning-Based Prediction of COVID-19: A Robust Approach for Early Diagnosis and Treatment.'' \textit{Proc. 5th Intl. Conf. on Trends in Computational and Cognitive Engineering}, Springer Nature Singapore, pp. 205--215.}{Most recent $\cdot$ \href{https://doi.org/10.1007/978-981-97-1923-5_16}{10.1007/978-981-97-1923-5\_16}}
+\resumeItemListEnd
+\vspace{2pt}
+\small{Full list: \href{https://mdmosfikurrahman.github.io/publication-list/}{Publication List} $\cdot$ \href{https://scholar.google.com/citations?user=1GAfMAEAAAAJ}{Google Scholar}.}
 
 \section{Extra-curricular Activities}
 \resumeItemListStart
