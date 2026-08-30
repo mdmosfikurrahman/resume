@@ -24,10 +24,15 @@
 % Footer settings
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot[C]{\footnotesize Updated On: \today}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 \setlength{\footskip}{15pt}
+
+% Show "Updated On" only on the last page
+\AtEndDocument{
+    \thispagestyle{fancy}
+    \fancyfoot[C]{\footnotesize Updated On: \today}
+}
 
 \urlstyle{same}
 
