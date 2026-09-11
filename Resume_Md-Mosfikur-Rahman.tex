@@ -1,220 +1,121 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[letterpaper,10.5pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{enumitem}
-\usepackage{fancyhdr}
-\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
 \usepackage{ragged2e}
-\usepackage[unicode, colorlinks, linkcolor=RoyalBlue, urlcolor=RoyalBlue, citecolor=RoyalBlue]{hyperref}
-\usepackage{fontawesome5}
-\definecolor{RoyalBlue}{rgb}{0.25,0.41,0.88}
+\usepackage{needspace}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
 
-% Page dimensions
-\geometry{
-    left=1.35cm,
-    right=1.35cm,
-    top=1.3cm,
-    bottom=1.3cm,
+\hypersetup{
+  pdftitle={Md. Mosfikur Rahman \textendash{} Resume},
+  pdfauthor={Md. Mosfikur Rahman},
+  pdfsubject={Senior Backend Engineer, Distributed Systems and Microservices},
+  pdfkeywords={Backend Engineer, Microservices, Distributed Systems, .NET, ASP.NET Core,
+    C\#, Java, Spring Boot, Kubernetes, Docker, Azure, AWS, gRPC, GraphQL, REST,
+    SQL Server, PostgreSQL, Redis, Elasticsearch, Team Lead, SaaS, Multi-tenant},
+  pdfcreator={},
+  pdfproducer={},
 }
 
-% Footer settings
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\setlength{\footskip}{15pt}
+% Make ligatures (fi, ff, fl) extract as plain letters so ATS keyword search works.
+% pdflatex only; skipped harmlessly under XeTeX/LuaTeX.
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
 
-% Show "Updated On" only on the last page
-\AtEndDocument{
-    \thispagestyle{fancy}
-    \fancyfoot[C]{\footnotesize Updated On: \today}
-}
-
-\urlstyle{same}
-
-% Text alignment
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
 \RaggedRight{}
-\setlength{\tabcolsep}{0in}
+\hyphenpenalty=10000
+\exhyphenpenalty=200
+\tolerance=2000
 
-% Section title formatting
-\titleformat{\section}{
-    \vspace{-4pt}\scshape\raggedright\LARGE
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}
+  {\normalsize\bfseries\uppercase}
+  {}{0em}{}
+  [\vspace{-7pt}\rule{\textwidth}{0.6pt}\vspace{-4pt}]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
 
-\titleformat{\subsection}{
-    \vspace{-4pt}\scshape\raggedright\Large
-}{}{0em}{}
-
-% Custom commands
-\newcommand{\resumeItem}[1]{\item[$\bullet$] \small{#1}}
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=9pt, topsep=1pt, parsep=0pt]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=1pt, parsep=0pt]
-}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\resumeSubheading}[5]{
-    \vspace{-1pt}\item
-    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{\href{#4}{#1}} & #2 \\
-    \textit{\small#3} & \textit{\small #5} \\
-    \end{tabular*}\vspace{-5pt}
-}
-\newcommand{\researchItem}[2]{%
-  \resumeItem{\hangindent=1.5em \hangafter=1 \justifying {#1}\\ \textit{#2}}%
+% {organisation}{dates}{role}{location}
+\newcommand{\entry}[4]{%
+  \needspace{5\baselineskip}
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabularx}
+  \nopagebreak
+  \vspace{-2pt}
 }
 
-% Resume Start
+\newenvironment{points}
+  {\begin{itemize}[leftmargin=12pt, itemsep=1.5pt, topsep=3pt, parsep=0pt, label=$\bullet$]}
+  {\end{itemize}\vspace{4pt}}
+
 \begin{document}
-\thispagestyle{empty}
 
-% Title
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\textsc{\LARGE Md. Mosfikur Rahman} & \\[4pt]
-	Senior Backend Engineer $|$ .NET \& Java & Mobile: +880 1797-554948 \\[4pt]
-	\href{https://github.com/mdmosfikurrahman}{\faGithub\ GitHub} \ $|$ \
-	\href{https://linkedin.com/in/mdmosfikurrahman}{\faLinkedin\ LinkedIn} \ $|$ \
-	\href{https://mdmosfikurrahman.github.io}{\faGlobe\ Portfolio} & Email: \href{mailto:mdmosfikurrahman.cse@gmail.com}{mdmosfikurrahman.cse@gmail.com} \\
-\end{tabular*}
+\begin{center}
+  {\LARGE\bfseries Md. Mosfikur Rahman}\\[4pt]
+  \small
+  Dhaka, Bangladesh $\cdot$ +880 1797-554948 $\cdot$
+  \href{mailto:mdmosfikurrahman.cse@gmail.com}{mdmosfikurrahman.cse@gmail.com}\\[2pt]
+  \href{https://linkedin.com/in/mdmosfikurrahman}{linkedin.com/in/mdmosfikurrahman} $\cdot$
+  \href{https://github.com/mdmosfikurrahman}{github.com/mdmosfikurrahman}\\[2pt]
+  Open to relocation and visa sponsorship
+\end{center}
 
-% Summary
-\section{Summary}
 \vspace{2pt}
-\small{\justifying Senior Backend Engineer with 4+ years of production experience across .NET and Java (Spring Boot) ecosystems, currently owning end-to-end backend architecture for a multi-tenant OTA booking SaaS platform spanning 7 .NET 9 microservices -- taken from an empty repository to two live white-label client deployments in 13 months. Lead a team of 10 engineers as principal author of the platform backend. Design distributed, service-oriented systems -- REST, GraphQL, gRPC, and SSE APIs -- and provide technical direction and mentorship across backend, frontend, and DevOps. Prior experience spans government compliance systems (Java, Spring Boot, Oracle) and e-commerce platforms (GraphQL BFF for Rakuten), with production deployments on Docker, Kubernetes, Azure, and AWS. Grounded in a research background of 10 peer-reviewed publications in applied machine learning.}
-\vspace{-2pt}
 
-% Experience
 \section{Experience}
-\resumeSubHeadingListStart
 
-\resumeSubheading
-{Akij iBOS Ltd.}{Dhaka, Bangladesh}
-{Software Engineer L-II (Team Lead)}{https://ibos.io/}{Nov. 2024 -- Present}
-\resumeItemListStart
-\resumeItem{Backend architect for Travilo, a multi-tenant OTA booking SaaS platform, owning end-to-end design across 7 .NET 9 microservices for supplier configuration, pricing/markup/discount rules, ancillary services, and booking workflows; principal author of the platform backend and top contributor on six of the seven services.}
-\resumeItem{Lead a team of 10 engineers across backend, frontend, and DevOps -- personally training and mentoring junior engineers, running daily scrum/sprint planning, and conducting code reviews and pair programming that established standardized backend patterns; the second white-label client went live six weeks after the first.}
-\resumeItem{Own the admin control plane -- 58 modules across 167 routes, with a role-based access model spanning 175 menus and 55 roles -- giving operations teams tenant-level control of pricing, ancillary services, finance, and booking workflows.}
-\resumeItem{Built a cross-service booking expiration/cancellation scheduler (gRPC + REST across Reservation, Configuration, and Notification services) that auto-expires unticketed bookings and keeps partner-facing state in sync.}
-\resumeItem{Designed the flight-search aggregation layer over 11 supplier and GDS connectors (Sabre, Amadeus, Travelport, and airline-direct APIs): Reservation fans out over gRPC to AirMaster, which aggregates downstream responses, and streams progressive results to the frontend via Server-Sent Events (SSE).}
-\resumeItem{Built the platform's observability layer -- middleware capturing every incoming and inter-service call (method, path, status, duration, payloads) to blob storage behind a unified Azure/AWS/Cloudflare storage abstraction -- now holding 36,000+ structured log objects in production and used daily for production debugging and on-call triage.}
-\resumeItem{Deploy with Docker for local development and Kubernetes for client-facing cloud environments; use Azure for CI/CD, Kubernetes-pod deployment, and storage, and AWS for transactional email; provide on-call production support, including weekend/emergency response, as booking volume grows past 1,000 per month.}
-\resumeItemListEnd
+\entry{Akij iBOS Ltd.}{Nov 2024 -- Present}{Engineering Team Lead (Software Engineer L-II)}{Dhaka, Bangladesh}
+\begin{points}
+\item Architected a multi-tenant OTA booking platform of 8 .NET 9 microservices, taking it from an empty repository to 3 live white-label client deployments serving 742 B2B agency accounts and 1,000+ bookings per month.
+\item Led a team of 10 across backend, frontend, and supplier integration, establishing the patterns, code review, and pair-programming practices that brought the second client live 6 weeks after the first.
+\item Designed the flight-search aggregation layer, fanning out over gRPC to 11 supplier and GDS connectors (Sabre, Amadeus, Travelport) and streaming results over Server-Sent Events: 1,000+ live fares aggregated in under 10s, with the first fares on the agent's screen in about 4s.
+\item Modelled pricing, markup, discount, and ancillary logic as tenant configuration rather than code, putting 96 live rules in operations' hands and removing deployments from commercial changes.
+\item Built the platform observability layer capturing every incoming and inter-service call to blob storage behind a unified Azure, AWS, and Cloudflare abstraction, now the primary tool for production debugging and on-call triage.
+\item Owned the architecture of TrackForce, a real-time employee-activity monitoring platform for 500+ employees, designing the flow from on-device agent through ingestion and storage to the reporting dashboard.
+\end{points}
 
-\resumeSubheading
-{REVE Systems Ltd.}{Dhaka, Bangladesh}
-{Software Engineer}{https://www.revesoft.com/}{Jul. 2023 -- Oct. 2024}
-\resumeItemListStart
-\resumeItem{Delivered the Legal Case and Utilization Declaration modules for the Customs Bond Management System, a National Board of Revenue (NBR) platform that digitized customs bond compliance for garment exporters, replacing manual processing.}
-\resumeItem{Collaborated with senior engineers and architects on overall system design while owning implementation of assigned modules end-to-end in Java, Spring Boot, and Oracle.}
-\resumeItem{Built the BGMEA/BKMEA database sync integration for export compliance, working closely with the Business Analysis team to translate compliance requirements into backend logic.}
-\resumeItem{Implemented OAuth2 / Spring Security authentication and clean-architecture REST APIs, and improved system throughput by $\sim$25\% through query tuning and data-access optimization.}
-\resumeItemListEnd
+\entry{REVE Systems Ltd.}{Jul 2023 -- Oct 2024}{Software Engineer}{Dhaka, Bangladesh}
+\begin{points}
+\item Delivered the Legal Case and Utilization Declaration modules of the National Board of Revenue's Customs Bond Management System in Java, Spring Boot, and Oracle, replacing a manual compliance process for garment exporters.
+\item Improved system throughput by 25\% through query tuning and data-access optimization, and built the BGMEA and BKMEA compliance sync with OAuth2 and Spring Security authentication.
+\end{points}
 
-\resumeSubheading
-{BJIT Group}{Dhaka, Bangladesh}
-{Software Engineer (Backend, Java \& GraphQL)}{https://bjitgroup.com/}{Apr. 2022 -- Jun. 2023}
-\resumeItemListStart
-\resumeItem{Implemented and enhanced a GraphQL Backend-for-Frontend for Rakuten e-commerce modules using Java and Spring Boot, providing a unified API layer over multiple backend services that reduced frontend integration complexity.}
-\resumeItem{Collaborated with Rakuten engineers and the internal BJIT team on schema design, contributing to technical discussions on resolver optimization and backend implementation approaches.}
-\resumeItem{Implemented resolver batching and schema stitching, reducing nested-query latency, and optimized database access paths, contributing reusable backend service patterns adopted across the team.}
-\resumeItemListEnd
+\entry{BJIT Group}{Apr 2022 -- Jun 2023}{Software Engineer, Backend}{Dhaka, Bangladesh}
+\begin{points}
+\item Shipped a GraphQL Backend-for-Frontend unifying multiple backend services for Rakuten e-commerce modules, reducing frontend integration complexity across the product teams.
+\item Cut nested-query latency through resolver batching and schema stitching, and contributed reusable backend service patterns adopted across the team.
+\end{points}
 
-\resumeSubHeadingListEnd
+\section{Skills}
 
-% Projects
-\section{Selected Projects}
-\resumeSubHeadingListStart
+\begin{tabularx}{\textwidth}{@{}p{2.4cm}X@{}}
+\textbf{Languages} & C\#, Java, TypeScript, SQL, Python \\[3pt]
+\textbf{Backend} & ASP.NET Core (.NET 9), Entity Framework Core, Spring Boot, Spring Security, JPA/Hibernate, \mbox{SignalR}, xUnit, JUnit \\[3pt]
+\textbf{Systems} & Microservices, Distributed Systems, REST, GraphQL, gRPC, Server-Sent Events, Domain-Driven Design, OAuth2/JWT, RBAC \\[3pt]
+\textbf{Data} & SQL Server, PostgreSQL, MySQL, Oracle, MongoDB, DynamoDB, Redis, Elasticsearch \\[3pt]
+\textbf{Frontend} & Next.js, React, Ant Design \\[3pt]
+\textbf{Infra} & Docker, Kubernetes, Azure, AWS, GitHub Actions, App Insights, ELK/Seq \\
+\end{tabularx}
 
-\resumeSubheading
-{Travilo (OTA Booking Platform)}{}
-{Akij iBOS Ltd.}{https://travilo.io/}{Stack: .NET 9, SQL Server, Microservices, DynamoDB, gRPC, GraphQL, SSE}
-\resumeItemListStart
-\resumeItem{Backend architect for a live travel platform spanning B2B, B2C, and API-only/consortium distribution -- two white-label client deployments in production serving 742 B2B agency accounts across 7 .NET 9 microservices.}
-\resumeItem{Exposed REST and GraphQL APIs for partner integration, including IP-whitelisted GraphQL access for API-only clients, plus an admin panel for centralized platform management; pricing, markup, discount, and ancillary logic is modelled as tenant configuration rather than code -- 96 rules live -- so commercial changes ship without a deployment.}
-\resumeItemListEnd
-
-\resumeSubheading
-{TrackForce (Employee Activity Monitoring)}{}
-{Akij iBOS Ltd.}{https://trackforce.io/}{Stack: ASP.NET Core, Time-Series Storage}
-\resumeItemListStart
-\resumeItem{Architected TrackForce, a real-time employee-activity monitoring platform for 500+ employees, designing the end-to-end data flow from the on-device agent through ingestion, storage, and the reporting dashboard.}
-\resumeItem{Defined the API and service boundaries between the ingestion pipeline and the storage/reporting layers so implementation could proceed against a fixed contract.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Customs Bond Management System (NBR)}{}
-{REVE Systems Ltd.}{https://cusbond.gov.bd/}{Stack: Java, Spring Boot, Thymeleaf, Oracle}
-\resumeItemListStart
-\resumeItem{National customs-compliance platform digitizing bond management for garment exporters; delivered the Legal Case and Utilization Declaration modules end-to-end within an architecture owned by senior engineers.}
-\resumeItem{Built the BGMEA/BKMEA compliance sync and implemented OAuth2/Spring Security authentication with audit-trail logging and role-based access control.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Rakuten Echiba Backend}{}
-{BJIT Group}{https://www.rakuten.co.jp/}{Stack: Java, Spring Boot, GraphQL}
-\resumeItemListStart
-\resumeItem{GraphQL BFF unifying multiple backend services into a single API layer for Rakuten e-commerce modules, reducing frontend integration complexity.}
-\resumeItem{Reduced nested-query latency via resolver batching and schema stitching, and optimized database access paths and join patterns.}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-% Programming Skills
-\section{Technical Skills}
-\resumeSubHeadingListStart
-\item{
-\small{
-\begin{tabular}{@{}p{3.2cm}@{\hspace{6pt}}p{\dimexpr\textwidth-3.2cm-6pt\relax}@{}}
-\textbf{Languages} & Java, C\#, TypeScript/JavaScript, SQL, Python \\[6pt]
-\textbf{Java Backend} & Spring Boot, Spring Security, Spring Data JPA/Hibernate, Spring GraphQL, JUnit, Mockito \\[6pt]
-\textbf{.NET Backend} & ASP.NET Core (.NET 9), Entity Framework Core, HotChocolate GraphQL \\[6pt]
-\textbf{Architecture} & Microservices, Distributed Systems, System Design, Clean/Layered Architecture, Domain-Driven Design, REST APIs, gRPC, SSE \\[6pt]
-\textbf{Cloud \& DevOps} & AWS, Azure, Docker, Kubernetes, CI/CD (GitHub Actions), Azure Monitor/App Insights, ELK/Seq \\[6pt]
-\textbf{Databases} & PostgreSQL, SQL Server, MySQL, Oracle, MongoDB, DynamoDB \\[6pt]
-\textbf{Frontend} & Next.js, React, AngularJS, Ant Design, Tailwind \\[6pt]
-\textbf{Domains} & Online Travel Agency (OTA) \& Booking Systems, GDS/Supplier Integration, PNR \& Ticketing Workflows, SaaS Platforms, Multi-tenant Systems, E-commerce, Government Compliance Systems \\[6pt]
-\textbf{Concepts} & OAuth2/JWT, Design Patterns, RBAC \& Secure APIs, Query \& Performance Optimization, Agile/Scrum, Pair Programming \\[6pt]
-\textbf{Tools} & Git, Linux/Unix \\
-\end{tabular}
-}}
-\resumeSubHeadingListEnd
-
-% Education
 \section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Daffodil International University}{Dhaka, Bangladesh}
-{B.Sc. in Computer Science and Engineering, CGPA: \textbf{3.83/4.00}}{https://daffodilvarsity.edu.bd/}{2018 -- 2021}
-\resumeSubheading
-{Adam Mickiewicz University}{Pozna\'n, Poland}
-{Erasmus+ International Exchange (one semester)}{https://amu.edu.pl/en}{2021}
-\resumeSubHeadingListEnd
 
-\newpage
-\section{Research \& Publications}
-\resumeSubHeadingListStart
-\item{\small{10 peer-reviewed publications (3 journal, 7 conference) in applied machine learning -- health analytics, IoT systems, and security; 2 as first author. Reviewer for \textit{ISA Transactions}, \textit{Journal of King Saud University -- Computer and Information Sciences}, and \textit{Natural Language Processing Journal}. Selected work:}}
-\resumeSubHeadingListEnd
-\resumeItemListStart
-\researchItem{\textbf{Rahman, Md. Mosfikur}, Kashem, M. A., Mohiuddin, M., Hossain, M. A., \& Moon, N. N. (2020). ``Future City of Bangladesh: IoT Based Autonomous Smart Sewerage and Hazard Condition Sharing System.'' \textit{Proc. 2020 IEEE Intl. Women in Engineering Conf. on Electrical and Computer Engineering (WIECON-ECE)}, pp. 126--130.}{\textbf{IEEE Best Paper Award} $\cdot$ First author $\cdot$ \href{https://doi.org/10.1109/WIECON-ECE52138.2020.9397950}{10.1109/WIECON-ECE52138.2020.9397950}}
-\researchItem{\textbf{Rahman, Md. Mosfikur}, Saifuzzaman, M., Ahmed, A., Mahin, M. F., \& Shetu, S. F. (2021). ``Impact of COVID-19 on mental health: A quantitative analysis of anxiety and depression based on regular life and internet use.'' \textit{Current Research in Behavioral Sciences} (Elsevier), 2:100037.}{First author $\cdot$ Journal $\cdot$ \href{https://doi.org/10.1016/j.crbeha.2021.100037}{10.1016/j.crbeha.2021.100037}}
-\researchItem{Shetu, S. F., \textbf{Rahman, Md. Mosfikur}, Ahmed, A., Mahin, M. F., Akib, M. A. U., \& Saifuzzaman, M. (2021). ``Impactful e-learning framework: A new hybrid form of education.'' \textit{Current Research in Behavioral Sciences} (Elsevier), 2:100038.}{Most-cited work $\cdot$ Journal $\cdot$ \href{https://doi.org/10.1016/j.crbeha.2021.100038}{10.1016/j.crbeha.2021.100038}}
-\researchItem{Islam, T., \textbf{Rahman, Md. Mosfikur}, Jabiullah, M. I., \& Saifuzzaman, M. (2023). ``Cyber Security Intruder Detection Using Deep Learning Approach.'' \textit{Information Systems and Management Science}, Springer International, pp. 518--530.}{Deep-learning intrusion detection on CICIDS2017 $\cdot$ \href{https://doi.org/10.1007/978-3-031-13150-9_42}{10.1007/978-3-031-13150-9\_42}}
-\researchItem{Johora, F. T., Mahfuja, I. B., Rahman, A. N. M. M., \textbf{Rahman, Md. Mosfikur}, \& Rahman, M. S. (2024). ``Machine Learning-Based Prediction of COVID-19: A Robust Approach for Early Diagnosis and Treatment.'' \textit{Proc. 5th Intl. Conf. on Trends in Computational and Cognitive Engineering}, Springer Nature Singapore, pp. 205--215.}{Most recent $\cdot$ \href{https://doi.org/10.1007/978-981-97-1923-5_16}{10.1007/978-981-97-1923-5\_16}}
-\resumeItemListEnd
-\vspace{2pt}
-\small{Full list: \href{https://mdmosfikurrahman.github.io/publication-list/}{Publication List} $\cdot$ \href{https://scholar.google.com/citations?user=1GAfMAEAAAAJ}{Google Scholar}.}
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+\textbf{Daffodil International University} --- B.Sc. in Computer Science and Engineering, CGPA 3.83/4.00 & 2018 -- 2021 \\[2pt]
+\textbf{Adam Mickiewicz University}, Pozna\'n, Poland --- Erasmus+ International Exchange & 2021 \\
+\end{tabularx}
 
-\section{Extra-curricular Activities}
-\resumeItemListStart
-\researchItem{\textbf{Conference Speaker}}{Delivered a technical session at the 10th IEEE International Women in Engineering (WIE) Conference on Electrical and Computer Engineering 2024 (IEEE WIECON-ECE 2024).}
-\researchItem{\textbf{Vice President, Research \& Career Wing}}{Led mentorship programs, research workshops, and career initiatives at the Computer \& Programming Club, DIU (2021).}
-\researchItem{\textbf{Journal Reviewer}}{Reviewer for several Elsevier/Springer journals and international conferences in ML and data science.}
-\resumeItemListEnd
+\section{Publications and Awards}
+
+10 peer-reviewed publications in applied machine learning, 2 as first author. \textbf{IEEE Best Paper Award}, WIECON-ECE 2020. Reviewer for \textit{ISA Transactions} and two further journals.
 
 \end{document}
